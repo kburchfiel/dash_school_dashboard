@@ -1,0 +1,11 @@
+dash
+
+pandas
+
+gunicorn
+
+dash-bootstrap-components
+
+sqlalchemy
+
+psycopg2-binary
