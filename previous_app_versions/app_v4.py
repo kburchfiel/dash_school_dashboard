@@ -1,19 +1,8 @@
-# Sample Dash app that creates an interactive school dashboard
 
-# This code was based on Dash's sample Dash app, available at: 
-# https://dash.plotly.com/minimal-app
-
-# By Kenneth Burchfiel
-# Released under the MIT license
-
-# Note: All data in this dashboard is entirely fictional.
-
-# More commentary will be provided in the future.
 
 
 """
- CREDIT for the login component of the code: 
- This code was originally adapted for Pages  based on Nader Elshehabi's  article:
+ CREDIT: This code was originally adapted for Pages  based on Nader Elshehabi's  article:
    https://dev.to/naderelshehabi/securing-plotly-dash-using-flask-login-4ia2
    https://github.com/naderelshehabi/dash-flask-login
 
@@ -30,11 +19,12 @@ For other Authentication options see:
 import os
 from flask import Flask, request, redirect, session, jsonify, url_for, render_template
 from flask_login import login_user, LoginManager, UserMixin, logout_user, current_user
+
+
 import dash
 from dash import dcc, html, Input, Output, State, ALL, callback
 import pandas as pd
 import plotly.express as px
-import sqlalchemy
 import dash_bootstrap_components as dbc
 
 
@@ -94,8 +84,8 @@ def logout():
 
 app = dash.Dash(
     __name__, server=server, use_pages=True, suppress_callback_exceptions=True,
-    external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+)
 
 # Keep this out of source code repository - save in a file or a database
 #  passwords should be encrypted

@@ -1,6 +1,5 @@
 # Source: https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service
 
-
 # Use the official lightweight Python image.
 # https://hub.docker.com/_/python
 FROM python:3.11-slim
@@ -22,6 +21,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # to be equal to the cores available.
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:server
-# I believe app:app was the correct option when I was deploying a pure Flask 
-# app to Google Cloud. However, after adding in Dash components, I needed
-# to switch the final line back to app:server.
+# Note: I changed the final part to app:server because I was receiving error messages
+# relating to gunicorn's inability to find 'main,' and because Arturo Tagle Correa's
+# guide showed app:server here as well (See https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4 ).
+# Note that the sample Heroku Procfile provided by Dash also 
+# ends in app:server : https://dash.plotly.com/deployment

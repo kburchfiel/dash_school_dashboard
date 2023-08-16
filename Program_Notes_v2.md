@@ -33,9 +33,11 @@ I then set up the Google Cloud Command Line Interface (CLI) on my computer; this
 As instructed by the [Cloud Run setup guide](https://cloud.google.com/run/docs/setup), I enabled the Cloud Run API for this new project. 
 
 
-1. With these setup tasks out of the way, I then followed the steps shown in Google's [Deploy a Python service to Cloud Run](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) article, but made a couple changes along the way based on the [Dash Heroku deployment guide](https://dash.plotly.com/deployment#heroku-for-sharing-public-dash-apps-for-free) and on Arturo Tagle Correa's [Deploying Dash to Google Cloud Run in 5 minutes](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) guide. These changes were necessary because the Deploy a Python Service to Cloud Run guide uses a Flask app as its example rather than Dash (which I believe is also based on Flask).
+1. With these setup tasks out of the way, I then followed the steps shown in Google's [Deploy a Python service to Cloud Run](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) article, but made a couple changes along the way based on the [Dash Heroku deployment guide](https://dash.plotly.com/deployment#heroku-for-sharing-public-dash-apps-for-free) and on Arturo Tagle Correa's [Deploying Dash to Google Cloud Run in 5 minutes](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) guide. These changes were necessary because the Deploy a Python Service to Cloud Run guide uses a Flask app as its example rather than Dash (which I believe is also based on Flask). This quote from the Dash Heroku guide also helped clarify things for me:
 
-(Note: I didn't simply follow Arturo's guide because his method involves installing Docker desktop. However, Docker is not free for certain commercial use cases. The above steps did not require that I install Docker desktop.)
+"Note that app refers to the filename app.py. server refers to the variable server inside that file."
+
+(By the way, I didn't simply follow Arturo's guide because his method involves installing Docker desktop. However, Docker is not free for certain commercial use cases. The above steps did not require that I install Docker desktop.)
 
 First, instead of using the main.py file shown in the Google article, I used the app.py example found [within the Layout section of the Plotly tutorial](https://dash.plotly.com/layout#more-about-html-components). (As discussed earlier, I also used the name 'app.py' instead of 'main.py' or anything else.) I then added  "server = app.server" under "app = Dash(\_\_name\_\_)" within this file, as this is seen in both Arturo's guide and Dash's Heroku deployment tutorial. 
 
@@ -50,7 +52,9 @@ pandas
 gunicorn
 
 
-Fourth, I changed the final part of the Dockerfile example in the Google guide from "main:app" to "app:server", since (1) I was receiving error messages relating to gunicorn's inability to find 'main,' and (2) [Arturo's guide](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) showed app:server here as well. Note that the Heroku Procfile shown in the Heroku deployment guide also ends in app:server.
+Fourth, I changed the final part of the Dockerfile example in the Google guide from "main:app" to "app:server", since (1) I was receiving error messages relating to gunicorn's inability to find 'main,'* and (2) [Arturo's guide](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) showed app:server here as well. Note that the Heroku Procfile shown in the Heroku deployment guide also ends in app:server.
+
+* Note to self: when running Flask apps (not dash apps) via Cloud Run, if you change the name of your app from 'main.py' to something else (e.g. 'app.py'), you'll also need to change 'main' to the name of your app (e.g. main:app --> app:app in the case of app.py). Otherwise, you'll receive an error message such as "no module named 'main'".
 
 5. Once I made these changes, I was able to successfully deploy my app to Cloud Run. I did so by opening my command prompt, navigating to the folder containing my app.py file, and entering:
 
@@ -71,7 +75,9 @@ Service URL: https://dsd-vtwzngx2pa-uc.a.run.app"
 
 Go ahead and click on the service URL (which will be different from the above URL in your case). You'll hopefully see a copy of the current version of your app. If you see a black page with a 'Service Unavailable' message, you'll likely need to modify your app's code or another file.
 
-When errors arose, I could debug them using my project's log at https://console.cloud.google.com/logs/ . Trying to run the app locally can also help, as an error that you encounter during local debugging can also be causing an error on the cloud-based version of the app.
+When errors arose, I could debug them using my project's log at https://console.cloud.google.com/logs/ . Sometimes, the most useful error messages were listed under the 'Default' severity category rather than the 'Error category,' so try looking at all messages instead of just those labeled 'error' when needed. Trying to run the app locally can also help, as an error that you encounter during local debugging can also be the explanation for an issue with the cloud-based version of the app.
+
+In order to limit the cost of your project, you may want to delete older versions of your app from Google's storage. You can do so by going to console.cloud.google.com, navigating to the Cloud Storage section, and deleting obsolete copies of your app. Similarly, you can go to https://console.cloud.google.com/artifacts/docker/ to delete obsolete Docker containers. (To identify any other services, such as Cloud Run, that are incurring charges, go to https://console.cloud.google.com/billing)
 
 6. Now that I had successfully deployed a sample Dash app to Cloud Run, I revised my app.py file to incorporate my school dashboard code. Although I could get this app to run locally by importing data from a .csv file, this approach wouldn't work online, since Cloud Run wouldn't be able to import it from my computer.
 

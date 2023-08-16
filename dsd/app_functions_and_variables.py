@@ -1,10 +1,16 @@
-# Support function(s) for Dash app
+# App Functions and Variables
 
 # By Kenneth Burchfiel
 # Released under the MIT license
 
+
+# Defining these functions and variables in a separate file helps keep
+# the main app.py code cleaner.
+
 import plotly.express as px
 import pandas as pd
+
+# Functions:
 
 def create_interactive_bar_chart_and_table(original_data_source, y_value,
 comparison_values, pivot_aggfunc, filter_list = None, 
@@ -204,4 +210,6 @@ color_discrete_sequence = px.colors.qualitative.Light24):
     table_data = data_source_pivot.to_dict('records')
 
     return output_histogram#, table_data
+
+
 
