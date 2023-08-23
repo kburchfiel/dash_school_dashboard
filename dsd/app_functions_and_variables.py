@@ -5,12 +5,180 @@
 
 
 # Defining these functions and variables in a separate file helps keep
-# the main app.py code cleaner.
+# the rest of the app code cleaner.
 
 import plotly.express as px
 import pandas as pd
+import platform
+import sqlalchemy
+import dash_bootstrap_components as dbc
+# See https://dash-bootstrap-components.opensource.faculty.ai/examples/iris/#sourceCode
+import dash
+from dash import Dash, html, dcc, callback, Output, Input
+
+
+# Determining where the program is being run and how to access
+# data:
+
+# The following code checks whether the output of platform.node() is equal
+# to the network name of my laptop. If it is, I know that the code is running
+# locally. If it isn't, I can assume that the code is running
+# via Cloud Run. (You'll need to replace this value with your own
+# computer's network name in order for the code to run correctly on your 
+# end. You can find this name by running platform.node() on 
+# your own computer.)
+# platform.node() returned 'localhost' for me when I tried running this 
+# code via Cloud Run, so you could also rewrite the code so that
+# offline_mode is set to False if platform.node() = localhost.
+
+print("Computer's network name:", platform.node())
+if platform.node() == 'DESKTOP-83K77J1':
+    offline_mode = True
+else:
+    offline_mode = False
+
+read_from_online_db = False # When both this variable and offline_mode are set
+# to True, the script will import data from the online PostgreSQL database 
+# rather than from a local .csv file. (When offline_mode is False, the script
+# will always read from the online database regardless of the value of
+# read_from_online_db.)
+
+
 
 # Functions:
+
+
+def create_database_engine():
+    '''This function allows us to create a SQLAlchemy engine that can connect
+    to our database. 
+    We will utilize two different methods of retrieving the online PostgreSQL 
+    database's URL (which will play a crucial role in creating the engine).
+    If offline_mode is True, we'll get the URL from a local folder. 
+    If it's instead set to False, we'll access the key through 
+    Google Cloud's Secret manager service.'''
+    if offline_mode == True: 
+        with open ("../../key_paths/path_to_keys_folder.txt") as file:
+            key_path = file.read()
+        with open(key_path+"/elephantsql_dashschooldemodb_url.txt") as file:
+            db_url = file.read()
+        # This code reads in my database's URL, which is listed on the home page for my database within elephantsql.com. As shown below, SQLAlchemy can use this URL to connect to the database. 
+
+    else: # The URL for the ElephantSQL database will
+    # be accessed through a Secret Manager volume stored online
+        with open('/projsecrets/elephant-sql-db-url') as file:
+            db_url = file.read()
+        # Based on https://stackoverflow.com/questions/68533094/how-do-i-access-mounted-secrets-when-using-google-cloud-run
+        # In order for this step to work, I needed to go to 
+        # https://console.cloud.google.com/run , select 'Edit & Deploy New Revision,'
+        # and then mount my secret (which I had created earlier) as a volume. 
+        # (I chose 'projsecrets' as my volume
+        # name.
+        # Note that the Secret Manager Secret Accessor role must be enabled for 
+        # your service account for your code to work, as noted here:
+        # https://cloud.google.com/run/docs/configuring/secrets#access-secret
+
+    # Now that we've retrieved the URL, we can use it to connect to the
+    # online database. 
+
+    elephantsql_db_url_for_sqlalchemy = db_url.replace('postgres://', 'postgresql://')
+    # This change, which is required for SQLAlchemy to work correctly, is based on the code suggested at:
+    # # https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres
+
+    elephantsql_engine = sqlalchemy.create_engine(elephantsql_db_url_for_sqlalchemy)
+    return elephantsql_engine
+
+# Using create_database_engine() to create an elephantsql engine that we can
+# use in subsequent code:
+elephantsql_engine = create_database_engine()
+
+def retrieve_data_from_table(table_name):
+    '''This function retrieves all data from a given database table. 
+    In order for it to work correctly, the name of the offline .csv file
+    that contains the table must be the same as the table name within
+    the online database.'''
+    print("offline_mode is set to:", offline_mode)
+    print("read_from_online_db is set to:", read_from_online_db)
+    if (offline_mode == True) and (read_from_online_db == False):
+        print("Reading from local .csv file")
+        # The file will be read locally, rather than from the online database,
+        # only if both of these conditions are met.
+        df_query = pd.read_csv(f'../{table_name}.csv')
+    else:
+        print("Reading from online database")
+        df_query = pd.read_sql(f"select * from {table_name}", con = elephantsql_engine)
+        
+    
+    return df_query
+
+# Retrieving all current enrollment data: (Initializing df_curr_enrollment
+# here will make it easier (and perhaps faster) 
+# to use this data within multiple DataFrames.)
+df_curr_enrollment = retrieve_data_from_table(table_name = 'curr_enrollment')
+
+
+
+
+enrollment_comparisons = ['School', 'Grade', 'Gender',
+'Race', 'Ethnicity']
+
+grade_reordering_map = {'K':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, 
+        '7':7, '8':8, '9':9, '10':10, '11':11, '12':12, 1:1, 2:2, 3:3, 
+        4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 11:11, 12:12} # This dictionary
+    # will be used to help order grades correctly (i.e. K-12) within charts.
+
+
+def create_filters_and_comparisons(df):
+    '''This function creates a set of filters and comparison options that
+    can be imported into the layout section of a dashboard page. Building
+    them within a function allows me to use them for multiple charts,
+    thus simplifying my code.'''
+    filters_and_comparisons = html.Div([
+        dbc.Row(
+            [dbc.Col('Schools:', lg = 1),
+            dbc.Col(
+                dcc.Dropdown(df_curr_enrollment['School'].unique(), 
+                list(df_curr_enrollment['School'].unique()), 
+                id='school_filter', multi=True), lg = 3), 
+            dbc.Col('Genders:', lg = 1),
+            dbc.Col(
+                dcc.Dropdown(df_curr_enrollment['Gender'].unique(), 
+                list(df_curr_enrollment['Gender'].unique()), id='gender_filter', 
+                multi=True), lg = 3)
+                ]),
+        dbc.Row([
+            dbc.Col('Grades:', lg = 1),
+            dbc.Col(
+                dcc.Dropdown(df_curr_enrollment['Grade'].unique(), 
+                list(df_curr_enrollment['Grade'].unique()), id='grade_filter', 
+                multi=True))]),
+        dbc.Row([
+            dbc.Col('Races:', lg = 1),
+            dbc.Col(
+                dcc.Dropdown(df_curr_enrollment['Race'].unique(), 
+                list(df_curr_enrollment['Race'].unique()), id='race_filter', 
+                multi=True), lg = 5),
+            dbc.Col('Ethnicities:', lg = 1),
+            dbc.Col(
+                dcc.Dropdown(df_curr_enrollment['Ethnicity'].unique(), 
+                list(df_curr_enrollment['Ethnicity'].unique()), id='ethnicity_filter', 
+                multi=True), lg = 3)            
+                ]),
+
+        dbc.Row(
+            [dbc.Col('Comparison Options:', lg=2),
+            dbc.Col(
+                dcc.Dropdown(enrollment_comparisons, 
+            ['School'], id='enrollment_comparisons', multi=True))
+        ]),
+
+        dbc.Row(
+            [dbc.Col('Color bars by:', lg = 2),
+            dbc.Col(
+                dcc.Dropdown(enrollment_comparisons, 
+            'School', id='color_bars_by', multi=False), lg = 3)])
+        ])
+    return filters_and_comparisons
+
 
 def create_interactive_bar_chart_and_table(original_data_source, y_value,
 comparison_values, pivot_aggfunc, filter_list = None, 
@@ -207,9 +375,10 @@ color_discrete_sequence = px.colors.qualitative.Light24):
     color_discrete_sequence=color_discrete_sequence
     )
 
-    table_data = data_source_pivot.to_dict('records')
+    table_data = data_source_pivot.to_dict('records') 
+    # See https://dash.plotly.com/datatable
 
-    return output_histogram#, table_data
+    return output_histogram, table_data
 
 
 

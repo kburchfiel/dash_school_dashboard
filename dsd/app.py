@@ -10,12 +10,13 @@
 
 # More commentary will be provided in the future.
 
-
 """
  CREDIT for the login component of the code: 
  This code was originally adapted for Pages  based on Nader Elshehabi's  article:
    https://dev.to/naderelshehabi/securing-plotly-dash-using-flask-login-4ia2
    https://github.com/naderelshehabi/dash-flask-login
+   Nader's code has been made available under the MIT license.
+   (See https://github.com/naderelshehabi/dash-flask-login/blob/main/LICENSE.md)
 
    This version is updated by Dash community member @jinnyzor For more info see:
    https://community.plotly.com/t/dash-app-pages-with-flask-login-flow-using-flask/69507
@@ -26,7 +27,6 @@ For other Authentication options see:
 
 """
 
-
 import os
 from flask import Flask, request, redirect, session, jsonify, url_for, render_template
 from flask_login import login_user, LoginManager, UserMixin, logout_user, current_user
@@ -36,8 +36,6 @@ import pandas as pd
 import plotly.express as px
 import sqlalchemy
 import dash_bootstrap_components as dbc
-
-
 
 # Exposing the Flask Server to enable configuring it for logging in
 server = Flask(__name__)
@@ -96,7 +94,6 @@ app = dash.Dash(
     __name__, server=server, use_pages=True, suppress_callback_exceptions=True,
     external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-
 # Keep this out of source code repository - save in a file or a database
 #  passwords should be encrypted
 VALID_USERNAME_PASSWORD = {"test": "test", "hello": "world"}
@@ -119,7 +116,6 @@ class User(UserMixin):
     def __init__(self, username):
         self.id = username
 
-
 @login_manager.user_loader
 def load_user(username):
     """This function loads the user by user id. Typically this looks up the user from a user database.
@@ -127,8 +123,6 @@ def load_user(username):
     So we'll simply return a User object with the passed in username.
     """
     return User(username)
-
-
 
 app.layout = html.Div(
     [
@@ -151,8 +145,6 @@ app.layout = html.Div(
 
     ]
 )
-
-
 
 if __name__ == "__main__":
     app.run_server(debug=True)

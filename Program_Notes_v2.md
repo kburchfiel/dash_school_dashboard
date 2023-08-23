@@ -54,7 +54,7 @@ gunicorn
 
 Fourth, I changed the final part of the Dockerfile example in the Google guide from "main:app" to "app:server", since (1) I was receiving error messages relating to gunicorn's inability to find 'main,'* and (2) [Arturo's guide](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) showed app:server here as well. Note that the Heroku Procfile shown in the Heroku deployment guide also ends in app:server.
 
-* Note to self: when running Flask apps (not dash apps) via Cloud Run, if you change the name of your app from 'main.py' to something else (e.g. 'app.py'), you'll also need to change 'main' to the name of your app (e.g. main:app --> app:app in the case of app.py). Otherwise, you'll receive an error message such as "no module named 'main'".
+* Note to self: when running Flask apps (not Dash apps) via Cloud Run, if you change the name of your app from 'main.py' to something else (e.g. 'app.py'), you'll also need to change 'main' to the name of your app (e.g. main:app --> app:app in the case of app.py). Otherwise, you'll receive an error message such as "no module named 'main'".
 
 5. Once I made these changes, I was able to successfully deploy my app to Cloud Run. I did so by opening my command prompt, navigating to the folder containing my app.py file, and entering:
 
