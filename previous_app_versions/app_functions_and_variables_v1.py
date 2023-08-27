@@ -14,7 +14,7 @@ import sqlalchemy
 import dash_bootstrap_components as dbc
 # See https://dash-bootstrap-components.opensource.faculty.ai/examples/iris/#sourceCode
 import dash
-from dash import Dash, html, dcc, Output, Input
+from dash import Dash, html, dcc, callback, Output, Input
 
 
 # Determining where the program is being run and how to access
@@ -116,39 +116,15 @@ def retrieve_data_from_table(table_name):
 df_curr_enrollment = retrieve_data_from_table(table_name = 'curr_enrollment')
 
 
-enrollment_comparisons = ['School', 'Grade', 'Gender',
-'Race', 'Ethnicity'] 
 
-# The following code creates a copy of enrollment_comparisons with a
-# 'None' option (that will get converted to the Python value of None)
-# so that users can choose not to select a given value.
-enrollment_comparisons_plus_none = enrollment_comparisons.copy()
-enrollment_comparisons_plus_none.append('None')
+
+enrollment_comparisons = ['School', 'Grade', 'Gender',
+'Race', 'Ethnicity']
 
 grade_reordering_map = {'K':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, 
         '7':7, '8':8, '9':9, '10':10, '11':11, '12':12, 1:1, 2:2, 3:3, 
         4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 11:11, 12:12} # This dictionary
     # will be used to help order grades correctly (i.e. K-12) within charts.
-
-def merge_demographics_into_df(df):
-    '''This function merges demographic variables from df_current_enrollment
-    into the DataFrame passed to df, then returns the new version
-    of the DataFrame.'''
-    # Creating a copy of df_current_enrollment that only contains 
-    # Student IDs (which will serve as the key for the merge) and 
-    # the demographic values contained in enrollment_comparisons:
-    df_curr_enrollment_for_merge = df_curr_enrollment.copy(
-        )[['Student_ID'] + enrollment_comparisons]
-    # Some of these demographic values may already be present within 
-    # the DataFrame, in which case they should be removed from
-    # df_curr_enrollment_for_merge so that we don't end up with multiple
-    # copies of the same column.
-    for column in df.columns:
-        if column in enrollment_comparisons:
-            df_curr_enrollment_for_merge.drop(column, 
-                axis = 1, inplace = True)
-    return df.merge(df_curr_enrollment_for_merge, 
-        on = 'Student_ID', how = 'left')
 
 
 def create_filters_and_comparisons(df):
@@ -162,7 +138,7 @@ def create_filters_and_comparisons(df):
             dbc.Col(
                 dcc.Dropdown(df_curr_enrollment['School'].unique(), 
                 list(df_curr_enrollment['School'].unique()), 
-                id='school_filter', multi=True), lg = 4), 
+                id='school_filter', multi=True), lg = 3), 
             dbc.Col('Genders:', lg = 1),
             dbc.Col(
                 dcc.Dropdown(df_curr_enrollment['Gender'].unique(), 
@@ -180,12 +156,12 @@ def create_filters_and_comparisons(df):
             dbc.Col(
                 dcc.Dropdown(df_curr_enrollment['Race'].unique(), 
                 list(df_curr_enrollment['Race'].unique()), id='race_filter', 
-                multi=True), lg = 6),
+                multi=True), lg = 5),
             dbc.Col('Ethnicities:', lg = 1),
             dbc.Col(
                 dcc.Dropdown(df_curr_enrollment['Ethnicity'].unique(), 
                 list(df_curr_enrollment['Ethnicity'].unique()), id='ethnicity_filter', 
-                multi=True), lg = 4)            
+                multi=True), lg = 3)            
                 ]),
 
         dbc.Row(
@@ -194,35 +170,31 @@ def create_filters_and_comparisons(df):
                 dcc.Dropdown(enrollment_comparisons, 
             ['School'], id='enrollment_comparisons', multi=True))
         ]),
+
+        dbc.Row(
+            [dbc.Col('Color bars by:', lg = 2),
+            dbc.Col(
+                dcc.Dropdown(enrollment_comparisons, 
+            'School', id='color_bars_by', multi=False), lg = 3)])
         ])
     return filters_and_comparisons
 
-def create_color_and_pattern_variable_dropdowns():
-    '''This code used to be part of create_filters_and_comparisons,
-    but I found that it is sometimes better to have the code define
-    these variables than for the user to be able to select them.
-    Therefore, I moved them to a standalone function so that they 
-    would only be added to pages' layouts when needed.'''
-    color_and_pattern_variable_dropdowns = html.Div([dbc.Row(
-    [dbc.Col('Color variable:', lg = 2),
-    dbc.Col(
-        dcc.Dropdown(enrollment_comparisons_plus_none, 
-    'School', id='color_variable', multi=False), lg = 3),
-    
-    dbc.Col('Pattern variable:', lg = 2),
-    dbc.Col(
-        dcc.Dropdown(enrollment_comparisons_plus_none,
-        id='pattern_variable', multi=False), lg = 3)])])
-    return color_and_pattern_variable_dropdowns
 
-
-def create_pivot_for_charts(original_data_source, y_value,
+def create_interactive_bar_chart_and_table(original_data_source, y_value,
 comparison_values, pivot_aggfunc, filter_list = None, 
-color_value = None, drop_color_value_from_x_vals = True, 
-secondary_differentiator = None, 
-drop_secondary_differentiator_from_x_vals = True,
-reorder_bars_by = '', reordering_map = {}, debug = False):
-    '''original_data_source: The source of the data that will be graphed.
+color_value = None, color_discrete_map = None, barmode = 'group',
+drop_color_value_from_x_vals = True, reorder_bars_by = '',
+reordering_map = {}, debug = False,
+color_discrete_sequence = px.colors.qualitative.Light24):
+    '''
+    This function creates an interactive bar chart (created using 
+    px.histogram() and a corresponding set of table data. Users can
+    update the chart by selecting comparison and filter values. 
+    These charts and table data are based off a pivot table that is 
+    created using the comparison values specified in the 
+    comparison_values argument. 
+
+    original_data_source: The source of the data that will be graphed.
 
     y_value: The y value to use within the graph.
 
@@ -238,29 +210,20 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
     filtered. The first component of each tuple is a column name; the second
     component is a list of values to include.
 
-    color_value and drop_color_value_from_x_vals: 
-    color_value specifies the variable to use for a color-based comparison 
-    in the final graph.
+    color_value: The variable to use for a color-based comparison in the
+    final graph.
+
+    color_discrete_map: A custom color mapping to pass to the chart.
+
     In order to represent all of the specified values in the bar chart, 
-    the code creates a column describing all (or almost all) of the 
-    pivot index variables in the other columns, which then gets fed into 
-    the x axis parameter of a histogram. However, if a color value is also 
-    specified, *and* drop_color_value_from_x_vals is set to True, this item 
-    will not get added into this column, since this
+    the code creates a column describing all (or almost all) 
+    of the pivot index variables
+    in the other columns, which then gets fed into the x axis parameter of 
+    a histogram. However, if a color value is also specified, this item 
+    does not get added into this column, since this
     data will already get represented in the bar chart (by means of the color
     legend). Removing this value helps
     simplify the final chart output.
-
-    secondary_differentiator: Similar to color_value, this is 
-    a second variable that will be represented via a chart feature 
-    (such as pattern_shape for a bar chart or line_dash for a 
-    line chart). Defining this variable allows it to be
-    removed from the column that describes the pivot index variables
-    so that the graph can be further simplified.
-
-    drop_secondary_differentiator_from_x_vals: Set this to True to remove
-    the variable stored in secondary_differentiator from the pivot table
-    column that will contain different x values.
 
     reorder_bars_by and reordering_map: Variables that you can
     use to update the order of the bars in the resulting chart. For instance,
@@ -280,19 +243,12 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
     Note: If you don't need to update the sort order of the values in the 
     column whose name was passed to reorder_bars_by, simply keep 
-    reordering_map as {}.'''
+    reordering_map as {}.
 
-    # Converting 'None' strings to None values:
-    if color_value == 'None':
-        color_value = None
-
-    if secondary_differentiator == 'None':
-        secondary_differentiator = None
-
-
-    print("Current state of color_value:",color_value, type(color_value))
-    print("Current state of secondary_differentiator:",secondary_differentiator, type(secondary_differentiator))
-
+    color_discrete_sequence: The color palette to use for the charts.
+    The default is Light24 because its use of 24 distinct colors
+    helps prevent bar colors from overlapping.
+    '''
 
     print("Filter list:",filter_list)
     data_source = original_data_source.copy() # Included to avoid modifying the
@@ -312,14 +268,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
     if debug == True:
         print("data_source_filtered:",data_source_filtered)
 
-    # The color value must be present within the comparison_values
+    # The color value must also be present within the comparison_values
     # table. If it is not, the following line sets color_value to None.
     if color_value not in comparison_values:
         color_value = None
-
-    # The same holds true for secondary_differentiator.
-    if secondary_differentiator not in comparison_values:
-        secondary_differentiator = None
 
     # In order to show comparisons within the final graph, we need to create
     # a table that contains those various comparisons. This function does so
@@ -353,13 +305,8 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
     if len(comparison_values) == 0:
         data_descriptor = all_data_value
-
     else:
         data_descriptor_values = comparison_values.copy()
-        
-        # We'll now remove the variables stored in
-        # color_value and secondary_differentiator from the chart if
-        # drop_color_value_from_x_vals and drop_
         if ((color_value != None) & (len(data_descriptor_values) > 1) 
             & (drop_color_value_from_x_vals == True)):
             data_descriptor_values.remove(color_value) 
@@ -367,14 +314,6 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
             # color component in the graph, it doesn't need to be assigned a 
             # group component, since it will show up in the graph regardless. 
             # Removing it here helps simplify the graph.
-
-        # Performing the same steps for secondary_differentiator:
-        if ((secondary_differentiator != None) & 
-            (len(data_descriptor_values) > 1) 
-            & (drop_secondary_differentiator_from_x_vals == True)):
-            data_descriptor_values.remove(secondary_differentiator) 
-            
-
         print(data_descriptor_values)   
         data_descriptor = data_source_pivot[
             data_descriptor_values[0]].copy() # This line initializes 
@@ -414,77 +353,11 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
                 reorder_bars_by].map(reordering_map)
             data_source_pivot.sort_values('column_for_sorting', 
             inplace = True)
+            print(data_source_pivot)
             data_source_pivot.drop('column_for_sorting', axis = 1, 
             inplace = True) # This column is no longer needed,
             # so we can remove it from the DataFrame.
-    
-    print("Pivot table created for charts/tables:")
-    print(data_source_pivot)
-    return data_source_pivot
 
-
-def create_interactive_bar_chart_and_table(data_source_pivot, y_value,
-comparison_values, color_value = None, color_discrete_map = None, 
-barmode = 'group', color_discrete_sequence = px.colors.qualitative.Light24,
-secondary_differentiator = None, text_auto = True, label_round_precision = None,
-table_round_precision = None):
-    '''This function converts a pivot table (presumably one returned by
-    create_pivot_for_charts() into an interactive bar chart and table.
-
-    data_source_pivot: The pivot table on which the chart will be based.
-    It is expected, but not required, that this table originate from
-    create_pivot_for_charts().
-
-    For definitions of y_value, comparison_values, and color_value,
-    see create_pivot_for_charts().
-
-    color_discrete_map: A custom color mapping to pass to the chart.
-
-    color_discrete_sequence: The color palette to use for the charts.
-    The default is Light24 because its use of 24 distinct colors
-    helps prevent bar colors from overlapping.
-
-    barmode: The means by which the bars will be presented relative to
-    one another. This keyword comes from Plotly's px.histogram() code.
-
-    secondary_differentiator: A value to pass to the pattern_shape argument,
-    allowing for further distinction between different bars. For documentation
-    on pattern_shape, see:
-    # https://plotly.com/python-api-reference/generated/plotly.express.bar
-
-    text_auto: Set to True to show data labels within charts.
-
-    label_round_precision: The extent to which chart labels should be rounded.
-    If the label is originally 555.933, a label_round_precision of 1 will
-    produce the number 555.9, and a label_round_precision of 0 will produce
-    556. No rounding will occur if label_round_precision is set to None.
-
-    table_round_precision: This variable rounds table values in the same way
-    that label_round_precision rounds label values.
-
-    '''
-
-    # Converting 'None' strings to None values:
-    if color_value == 'None':
-        color_value = None
-
-    if secondary_differentiator == 'None':
-        secondary_differentiator = None
-
-
-    data_source_pivot_for_table = data_source_pivot.copy() # This script 
-    # will apply changes to copies of data_source_pivot so that the original
-    # pivot table is not affected.
-
-    if table_round_precision != None:
-        data_source_pivot_for_table[y_value] = round(
-            data_source_pivot_for_table[y_value], table_round_precision)
-
-    table_data = data_source_pivot_for_table.to_dict('records') 
-    # See https://dash.plotly.com/datatable
-
-
-    data_source_pivot_for_chart = data_source_pivot.copy()
 
     # There is no need to perform bar grouping if only one pivot variable 
     # exists, so the following if/else statement sets barmode to 
@@ -492,131 +365,20 @@ table_round_precision = None):
     # in order to simplify the x axis variables.
     if len(comparison_values) == 1:
         selected_barmode = 'relative'
+    
     else:
         selected_barmode = barmode
-    
-    # The color value must be present within the comparison_values
-    # table in order for the code to utilize it. 
-    # If it is not, the following line sets color_value to None.
-    if color_value not in comparison_values:
-        color_value = None
 
-    # The same holds true for secondary_differentiator.
-    if secondary_differentiator not in comparison_values:
-        secondary_differentiator = None
-
-
-    # Rounding y values to be shown in labels:
-    if label_round_precision != None:
-        data_source_pivot_for_chart[y_value] = round(
-            data_source_pivot_for_chart[y_value], 
-        label_round_precision)
-
-    output_histogram = px.histogram(data_source_pivot_for_chart, x = 'Group', 
+    output_histogram = px.histogram(data_source_pivot, x = 'Group', 
     y = y_value, color = color_value, 
     barmode = selected_barmode, color_discrete_map=color_discrete_map,
-    color_discrete_sequence=color_discrete_sequence,
-    pattern_shape = secondary_differentiator, text_auto = text_auto
+    color_discrete_sequence=color_discrete_sequence
     )
 
+    table_data = data_source_pivot.to_dict('records') 
+    # See https://dash.plotly.com/datatable
 
     return output_histogram, table_data
 
 
 
-
-def create_interactive_line_chart_and_table(data_source_pivot, y_value, 
-comparison_values, color_value = None, color_discrete_map = None, 
-color_discrete_sequence = px.colors.qualitative.Light24, 
-markers = True, secondary_differentiator = None,
-show_labels = True, label_round_precision = None,
-table_round_precision = None):
-    '''This function converts a pivot table (presumably one returned by
-    create_pivot_for_charts() into an interactive line chart and table.
-
-    data_source_pivot: The pivot table on which the chart will be based.
-    It is expected, but not required, that this table originate from
-    create_pivot_for_charts().
-
-    For definitions of y_value, comparison_values, and color_value,
-    see create_pivot_for_charts().
-
-    color_discrete_map: A custom color mapping to pass to the chart.
-
-    color_discrete_sequence: The color palette to use for the charts.
-    The default is Light24 because its use of 24 distinct colors
-    helps prevent bar colors from overlapping.
-
-    markers: Set to True to add markers to your line chart and False to
-    omit them.
-
-    secondary_differentiator: A variable to be passed to the line_dash
-    # argument of px.line(). For documentation on line_dash,
-    # see: https://plotly.com/python-api-reference/generated/plotly.express.line 
-
-    show_labels: Set to True to show data labels within charts.
-
-    label_round_precision: The extent to which chart labels should be rounded.
-    If the label is originally 555.933, a label_round_precision of 1 will
-    produce the number 555.9, and a label_round_precision of 0 will produce
-    556. No rounding will occur if label_round_precision is set to None.
-
-    table_round_precision: This variable rounds table values in the same way
-    that label_round_precision rounds label values.
-
-    '''
-
-    # Converting 'None' strings to None values:
-    if color_value == 'None':
-        color_value = None
-
-    if secondary_differentiator == 'None':
-        secondary_differentiator = None
-
-    # The color value must be present within the comparison_values
-    # table in order for the code to utilize it. 
-    # If it is not, the following line sets color_value to None.
-    if color_value not in comparison_values:
-        color_value = None
-
-    # The same holds true for secondary_differentiator.
-    if secondary_differentiator not in comparison_values:
-        secondary_differentiator = None
-
-
-    data_source_pivot_for_table = data_source_pivot.copy() # This script 
-    # will apply changes to copies of data_source_pivot so that the original
-    # pivot table is not affected.
-    
-    if table_round_precision != None:
-        data_source_pivot_for_table[y_value] = round(
-            data_source_pivot_for_table[y_value], table_round_precision)
-
-    table_data = data_source_pivot_for_table.to_dict('records') 
-    # See https://dash.plotly.com/datatable
-
-
-    data_source_pivot_for_chart = data_source_pivot.copy()
-
-
-    # Rounding y values to be shown in labels:
-    if label_round_precision != None:
-        data_source_pivot_for_chart[y_value] = round(
-            data_source_pivot_for_chart[y_value], 
-        label_round_precision)
-
-    # Determining whether to show labels:
-    if show_labels == True:
-        text = y_value
-    else:
-        text = None
-
-    output_chart = px.line(data_source_pivot_for_chart, x = 'Group', 
-    y = y_value, color = color_value,
-    color_discrete_map=color_discrete_map,
-    color_discrete_sequence=color_discrete_sequence,
-    markers = markers, line_dash = secondary_differentiator, text = y_value
-    )
-    # See https://plotly.com/python/line-charts/
-
-    return output_chart, table_data
