@@ -151,11 +151,16 @@ def merge_demographics_into_df(df):
         on = 'Student_ID', how = 'left')
 
 
-def create_filters_and_comparisons(df):
+def create_filters_and_comparisons(df, default_comparison_option = ['School']):
     '''This function creates a set of filters and comparison options that
     can be imported into the layout section of a dashboard page. Building
     them within a function allows me to use them for multiple charts,
-    thus simplifying my code.'''
+    thus simplifying my code.
+    
+    default_comparison_option allows you to choose the initial comparison 
+    group that will be presented to the user. If you do not wish to show
+    any comparisons by default, set this variable to [].
+    '''
     filters_and_comparisons = html.Div([
         dbc.Row(
             [dbc.Col('Schools:', lg = 1),
@@ -192,22 +197,26 @@ def create_filters_and_comparisons(df):
             [dbc.Col('Comparison Options:', lg=2),
             dbc.Col(
                 dcc.Dropdown(enrollment_comparisons, 
-            ['School'], id='enrollment_comparisons', multi=True))
+            default_comparison_option, id='enrollment_comparisons', multi=True))
         ]),
         ])
     return filters_and_comparisons
 
-def create_color_and_pattern_variable_dropdowns():
+def create_color_and_pattern_variable_dropdowns(color_default = 'School',
+    pattern_default = 'None'):
     '''This code used to be part of create_filters_and_comparisons,
     but I found that it is sometimes better to have the code define
     these variables than for the user to be able to select them.
     Therefore, I moved them to a standalone function so that they 
-    would only be added to pages' layouts when needed.'''
+    would only be added to pages' layouts when needed.
+    
+    The color_default and pattern_default variables allow you to choose
+    default entries for color_variable and pattern_variable if needed.'''
     color_and_pattern_variable_dropdowns = html.Div([dbc.Row(
     [dbc.Col('Color variable:', lg = 2),
     dbc.Col(
         dcc.Dropdown(enrollment_comparisons_plus_none, 
-    'School', id='color_variable', multi=False), lg = 3),
+    color_default, id='color_variable', multi=False), lg = 3),
     
     dbc.Col('Pattern variable:', lg = 2),
     dbc.Col(
@@ -377,7 +386,7 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
         print(data_descriptor_values)   
         data_descriptor = data_source_pivot[
-            data_descriptor_values[0]].copy() # This line initializes 
+            data_descriptor_values[0]].copy().astype('str') # This line initializes 
             # data_descriptor as the first item within data_descriptor_values.
             # copy() is needed in order to avoid modifying this column when
         # the group column gets chosen.
@@ -389,7 +398,7 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
         # choices and different column counts.
         for i in range(1, len(data_descriptor_values)):
             data_descriptor += ' ' + data_source_pivot[
-                data_descriptor_values[i]] # This line adds the value of a 
+                data_descriptor_values[i]].astype('str') # This line adds the value of a 
                 # given column to data_descriptor.
 
     data_source_pivot['Group'] = data_descriptor # This group column will be 

@@ -2,7 +2,7 @@
 # Released under the MIT license
 
 # Additional documentation can be found within
-# visualization_1.py.
+# current_enrollment.py.
 
 import dash
 from dash import Dash, html, dcc, callback, Output, Input, dash_table
@@ -14,6 +14,7 @@ import sqlalchemy
 import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path = '/test_results')
+# See https://dash.plotly.com/urls
 
 
 df_test_results = retrieve_data_from_table('test_results')

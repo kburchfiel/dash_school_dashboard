@@ -1,0 +1,1076 @@
+Student_ID,Starting_Year,Full_School_Name,School,Grade,Gender,Race,Ethnicity,Outcome,Students
+30000,2018,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30001,2018,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30002,2018,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Other/Unknown,1
+30003,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30004,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30005,2018,Chestnut Academy,CA,12,Male,African American,Hispanic,Other/Unknown,1
+30006,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Employment,1
+30007,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Employment,1
+30008,2018,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30009,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30010,2018,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Employment,1
+30011,2018,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,2 Year College,1
+30012,2018,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30013,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30014,2018,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30015,2018,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30016,2018,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30017,2018,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30018,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,2 Year College,1
+30019,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30020,2018,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30021,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30022,2018,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30023,2018,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,2 Year College,1
+30024,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30025,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30026,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30027,2018,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30028,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30029,2018,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30030,2018,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+30031,2018,Sycamore Academy,SA,12,Female,White,Hispanic,Employment,1
+30032,2018,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30033,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30034,2018,Chestnut Academy,CA,12,Male,African American,Hispanic,Employment,1
+30035,2018,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30036,2018,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30037,2018,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30038,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,2 Year College,1
+30039,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30040,2018,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30041,2018,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,Employment,1
+30042,2018,Hickory Academy,HA,12,Male,White,Hispanic,Other/Unknown,1
+30043,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30044,2018,Sycamore Academy,SA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30045,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30046,2018,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30047,2018,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30048,2018,Hickory Academy,HA,12,Male,White,Hispanic,Other/Unknown,1
+30049,2018,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30050,2018,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30051,2018,Hickory Academy,HA,12,Male,African American,Hispanic,Employment,1
+30052,2018,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30053,2018,Dogwood Academy,DA,12,Female,Asian,Hispanic,Other/Unknown,1
+30054,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30055,2018,Hickory Academy,HA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30056,2018,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30057,2018,Sycamore Academy,SA,12,Male,American Indian,Hispanic,4 Year College,1
+30058,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30059,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Employment,1
+30060,2018,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
+30061,2018,Hickory Academy,HA,12,Female,Asian,Hispanic,Trade School,1
+30062,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,2 Year College,1
+30063,2018,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30064,2018,Chestnut Academy,CA,12,Male,Asian,Hispanic,4 Year College,1
+30065,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+30066,2018,Sycamore Academy,SA,12,Male,White,Hispanic,2 Year College,1
+30067,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30068,2018,Hickory Academy,HA,12,Male,African American,Hispanic,Trade School,1
+30069,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30070,2018,Hickory Academy,HA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30071,2018,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30072,2018,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30073,2018,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30074,2018,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30075,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30076,2018,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30077,2018,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30078,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30079,2018,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30080,2018,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30081,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30082,2018,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30083,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30084,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30085,2018,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30086,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30087,2018,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30088,2018,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30089,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30090,2018,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30091,2018,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30092,2018,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30093,2018,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30094,2018,Hickory Academy,HA,12,Female,African American,Hispanic,2 Year College,1
+30095,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30096,2018,Hickory Academy,HA,12,Female,American Indian,Non-Hispanic,2 Year College,1
+30097,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30098,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30099,2018,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30100,2018,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30101,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30102,2018,Dogwood Academy,DA,12,Male,Asian,Hispanic,Employment,1
+30103,2018,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30104,2018,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30105,2018,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30106,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30107,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30108,2018,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30109,2018,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30110,2018,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+30111,2018,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30112,2018,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30113,2018,Chestnut Academy,CA,12,Male,White,Hispanic,2 Year College,1
+30114,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30115,2018,Hickory Academy,HA,12,Female,White,Hispanic,2 Year College,1
+30116,2018,Dogwood Academy,DA,12,Male,Asian,Hispanic,4 Year College,1
+30117,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30118,2018,Dogwood Academy,DA,12,Female,American Indian,Non-Hispanic,Employment,1
+30119,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30120,2018,Chestnut Academy,CA,12,Male,American Indian,Hispanic,4 Year College,1
+30121,2018,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30122,2018,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30123,2018,Hickory Academy,HA,12,Female,White,Hispanic,Employment,1
+30124,2018,Chestnut Academy,CA,12,Male,Asian,Hispanic,Trade School,1
+30125,2018,Dogwood Academy,DA,12,Female,American Indian,Non-Hispanic,Employment,1
+30126,2018,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30127,2018,Hickory Academy,HA,12,Male,White,Non-Hispanic,Trade School,1
+30128,2018,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30129,2018,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30130,2018,Chestnut Academy,CA,12,Female,White,Non-Hispanic,2 Year College,1
+30131,2018,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30132,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30133,2018,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30134,2018,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30135,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30136,2018,Sycamore Academy,SA,12,Female,Asian,Hispanic,Employment,1
+30137,2018,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30138,2018,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30139,2018,Hickory Academy,HA,12,Female,African American,Hispanic,Employment,1
+30140,2018,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30141,2018,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Employment,1
+30142,2018,Chestnut Academy,CA,12,Male,Asian,Hispanic,Employment,1
+30143,2018,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30144,2018,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30145,2018,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30146,2018,Dogwood Academy,DA,12,Female,Asian,Hispanic,4 Year College,1
+30147,2018,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30148,2018,Dogwood Academy,DA,12,Female,Asian,Hispanic,Trade School,1
+30149,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30150,2018,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30151,2018,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30152,2018,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30153,2018,Hickory Academy,HA,12,Male,Asian,Hispanic,Trade School,1
+30154,2018,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30155,2018,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30156,2018,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30157,2018,Dogwood Academy,DA,12,Male,White,Hispanic,Employment,1
+30158,2018,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Employment,1
+30159,2018,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Employment,1
+30160,2018,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30161,2018,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30162,2018,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30163,2018,Dogwood Academy,DA,12,Female,African American,Hispanic,Other/Unknown,1
+30164,2018,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30165,2018,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30166,2018,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30167,2018,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30168,2018,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30169,2018,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30170,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30171,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30172,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30173,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Trade School,1
+30174,2019,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30175,2019,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30176,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,Employment,1
+30177,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30178,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30179,2019,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30180,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30181,2019,Hickory Academy,HA,12,Male,White,Hispanic,2 Year College,1
+30182,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30183,2019,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30184,2019,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30185,2019,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30186,2019,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30187,2019,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30188,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30189,2019,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Employment,1
+30190,2019,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Employment,1
+30191,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30192,2019,Chestnut Academy,CA,12,Male,White,Hispanic,Other/Unknown,1
+30193,2019,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30194,2019,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30195,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30196,2019,Dogwood Academy,DA,12,Female,African American,Hispanic,Other/Unknown,1
+30197,2019,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30198,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30199,2019,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30200,2019,Hickory Academy,HA,12,Male,Asian,Hispanic,4 Year College,1
+30201,2019,Hickory Academy,HA,12,Male,White,Hispanic,Trade School,1
+30202,2019,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30203,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Trade School,1
+30204,2019,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30205,2019,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30206,2019,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Trade School,1
+30207,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30208,2019,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30209,2019,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30210,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Trade School,1
+30211,2019,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30212,2019,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30213,2019,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30214,2019,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30215,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30216,2019,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30217,2019,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30218,2019,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30219,2019,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30220,2019,Hickory Academy,HA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30221,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30222,2019,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30223,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30224,2019,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Employment,1
+30225,2019,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30226,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30227,2019,Dogwood Academy,DA,12,Female,Asian,Hispanic,Trade School,1
+30228,2019,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30229,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30230,2019,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30231,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30232,2019,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30233,2019,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30234,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30235,2019,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30236,2019,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30237,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30238,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30239,2019,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30240,2019,Sycamore Academy,SA,12,Female,African American,Hispanic,Employment,1
+30241,2019,Sycamore Academy,SA,12,Female,African American,Hispanic,Employment,1
+30242,2019,Dogwood Academy,DA,12,Female,Asian,Hispanic,4 Year College,1
+30243,2019,Chestnut Academy,CA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30244,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30245,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30246,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Employment,1
+30247,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30248,2019,Hickory Academy,HA,12,Male,African American,Hispanic,2 Year College,1
+30249,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30250,2019,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30251,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30252,2019,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30253,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30254,2019,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
+30255,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30256,2019,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30257,2019,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30258,2019,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30259,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30260,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30261,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30262,2019,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,2 Year College,1
+30263,2019,Hickory Academy,HA,12,Female,White,Hispanic,2 Year College,1
+30264,2019,Sycamore Academy,SA,12,Female,American Indian,Non-Hispanic,Employment,1
+30265,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30266,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30267,2019,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30268,2019,Chestnut Academy,CA,12,Female,Asian,Hispanic,Employment,1
+30269,2019,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30270,2019,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,Employment,1
+30271,2019,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30272,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Trade School,1
+30273,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Employment,1
+30274,2019,Sycamore Academy,SA,12,Male,Asian,Hispanic,4 Year College,1
+30275,2019,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30276,2019,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+30277,2019,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30278,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30279,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30280,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30281,2019,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30282,2019,Hickory Academy,HA,12,Female,American Indian,Non-Hispanic,Employment,1
+30283,2019,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30284,2019,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30285,2019,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30286,2019,Sycamore Academy,SA,12,Male,African American,Hispanic,4 Year College,1
+30287,2019,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30288,2019,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+30289,2019,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30290,2019,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30291,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30292,2019,Chestnut Academy,CA,12,Male,American Indian,Non-Hispanic,2 Year College,1
+30293,2019,Dogwood Academy,DA,12,Female,White,Hispanic,Trade School,1
+30294,2019,Sycamore Academy,SA,12,Male,Asian,Hispanic,4 Year College,1
+30295,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30296,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30297,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30298,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30299,2019,Sycamore Academy,SA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30300,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,Employment,1
+30301,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30302,2019,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30303,2019,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30304,2019,Hickory Academy,HA,12,Female,Asian,Hispanic,Employment,1
+30305,2019,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,Trade School,1
+30306,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30307,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30308,2019,Chestnut Academy,CA,12,Female,American Indian,Hispanic,4 Year College,1
+30309,2019,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Employment,1
+30310,2019,Dogwood Academy,DA,12,Female,African American,Hispanic,Employment,1
+30311,2019,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30312,2019,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30313,2019,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30314,2019,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30315,2019,Hickory Academy,HA,12,Female,Asian,Hispanic,Trade School,1
+30316,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30317,2019,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30318,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30319,2019,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30320,2019,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,Trade School,1
+30321,2019,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30322,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30323,2019,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30324,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Employment,1
+30325,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Employment,1
+30326,2019,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30327,2019,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30328,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30329,2019,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30330,2019,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Employment,1
+30331,2019,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,Other/Unknown,1
+30332,2019,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30333,2019,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Employment,1
+30334,2019,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+30335,2019,Dogwood Academy,DA,12,Male,Asian,Hispanic,2 Year College,1
+30336,2019,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Trade School,1
+30337,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30338,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30339,2019,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Trade School,1
+30340,2019,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30341,2019,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30342,2019,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30343,2019,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30344,2019,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30345,2019,Dogwood Academy,DA,12,Male,African American,Hispanic,Employment,1
+30346,2019,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Trade School,1
+30347,2019,Hickory Academy,HA,12,Male,Asian,Hispanic,4 Year College,1
+30348,2019,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30349,2019,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Trade School,1
+30350,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30351,2019,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Employment,1
+30352,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30353,2019,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30354,2019,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30355,2019,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30356,2019,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30357,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,Trade School,1
+30358,2019,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30359,2019,Sycamore Academy,SA,12,Male,African American,Hispanic,4 Year College,1
+30360,2019,Sycamore Academy,SA,12,Male,Asian,Hispanic,Employment,1
+30361,2019,Hickory Academy,HA,12,Male,White,Non-Hispanic,2 Year College,1
+30362,2019,Chestnut Academy,CA,12,Female,African American,Hispanic,Other/Unknown,1
+30363,2019,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30364,2019,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30365,2019,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Other/Unknown,1
+30366,2019,Dogwood Academy,DA,12,Female,White,Hispanic,Employment,1
+30367,2019,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30368,2019,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30369,2019,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30370,2020,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30371,2020,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
+30372,2020,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30373,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Trade School,1
+30374,2020,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30375,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30376,2020,Dogwood Academy,DA,12,Female,White,Hispanic,Trade School,1
+30377,2020,Chestnut Academy,CA,12,Male,Asian,Hispanic,Trade School,1
+30378,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30379,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30380,2020,Chestnut Academy,CA,12,Female,Asian,Hispanic,4 Year College,1
+30381,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30382,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30383,2020,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30384,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30385,2020,Sycamore Academy,SA,12,Male,White,Hispanic,Employment,1
+30386,2020,Dogwood Academy,DA,12,Female,African American,Hispanic,2 Year College,1
+30387,2020,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30388,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Trade School,1
+30389,2020,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30390,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30391,2020,Sycamore Academy,SA,12,Male,White,Hispanic,Trade School,1
+30392,2020,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30393,2020,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Employment,1
+30394,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+30395,2020,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30396,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30397,2020,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30398,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30399,2020,Hickory Academy,HA,12,Male,White,Hispanic,Employment,1
+30400,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30401,2020,Hickory Academy,HA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30402,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30403,2020,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30404,2020,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30405,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+30406,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30407,2020,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30408,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Trade School,1
+30409,2020,Sycamore Academy,SA,12,Female,African American,Hispanic,Trade School,1
+30410,2020,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30411,2020,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30412,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,2 Year College,1
+30413,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30414,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+30415,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30416,2020,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30417,2020,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30418,2020,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30419,2020,Hickory Academy,HA,12,Male,White,Non-Hispanic,Trade School,1
+30420,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30421,2020,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30422,2020,Hickory Academy,HA,12,Male,African American,Hispanic,Trade School,1
+30423,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Employment,1
+30424,2020,Chestnut Academy,CA,12,Male,Asian,Hispanic,4 Year College,1
+30425,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Employment,1
+30426,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Other/Unknown,1
+30427,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30428,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30429,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30430,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,2 Year College,1
+30431,2020,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30432,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30433,2020,Dogwood Academy,DA,12,Male,Asian,Hispanic,Trade School,1
+30434,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30435,2020,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30436,2020,Sycamore Academy,SA,12,Male,White,Hispanic,Other/Unknown,1
+30437,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30438,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30439,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30440,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30441,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30442,2020,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30443,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30444,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30445,2020,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30446,2020,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30447,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Trade School,1
+30448,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30449,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30450,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30451,2020,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30452,2020,Sycamore Academy,SA,12,Female,White,Hispanic,Other/Unknown,1
+30453,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30454,2020,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30455,2020,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30456,2020,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30457,2020,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30458,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Employment,1
+30459,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Employment,1
+30460,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30461,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,2 Year College,1
+30462,2020,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,Employment,1
+30463,2020,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30464,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Employment,1
+30465,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Employment,1
+30466,2020,Dogwood Academy,DA,12,Female,African American,Hispanic,Employment,1
+30467,2020,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Trade School,1
+30468,2020,Sycamore Academy,SA,12,Female,African American,Hispanic,Trade School,1
+30469,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30470,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30471,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Trade School,1
+30472,2020,Chestnut Academy,CA,12,Male,American Indian,Non-Hispanic,Trade School,1
+30473,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30474,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30475,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30476,2020,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30477,2020,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30478,2020,Sycamore Academy,SA,12,Male,White,Hispanic,Other/Unknown,1
+30479,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,2 Year College,1
+30480,2020,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30481,2020,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30482,2020,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30483,2020,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30484,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30485,2020,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30486,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30487,2020,Hickory Academy,HA,12,Male,White,Hispanic,Trade School,1
+30488,2020,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30489,2020,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30490,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30491,2020,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30492,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30493,2020,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30494,2020,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30495,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30496,2020,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30497,2020,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30498,2020,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Employment,1
+30499,2020,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30500,2020,Sycamore Academy,SA,12,Male,American Indian,Hispanic,4 Year College,1
+30501,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30502,2020,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30503,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30504,2020,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30505,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30506,2020,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30507,2020,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Trade School,1
+30508,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Employment,1
+30509,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30510,2020,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
+30511,2020,Dogwood Academy,DA,12,Female,Asian,Hispanic,Trade School,1
+30512,2020,Sycamore Academy,SA,12,Male,African American,Hispanic,4 Year College,1
+30513,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30514,2020,Sycamore Academy,SA,12,Male,White,Hispanic,Employment,1
+30515,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30516,2020,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30517,2020,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30518,2020,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30519,2020,Chestnut Academy,CA,12,Male,White,Hispanic,2 Year College,1
+30520,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Trade School,1
+30521,2020,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30522,2020,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30523,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Employment,1
+30524,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Trade School,1
+30525,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30526,2020,Hickory Academy,HA,12,Female,African American,Hispanic,Trade School,1
+30527,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30528,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Employment,1
+30529,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30530,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30531,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30532,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30533,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Employment,1
+30534,2020,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30535,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Trade School,1
+30536,2020,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30537,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30538,2020,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Trade School,1
+30539,2020,Sycamore Academy,SA,12,Male,African American,Hispanic,4 Year College,1
+30540,2020,Chestnut Academy,CA,12,Male,White,Hispanic,2 Year College,1
+30541,2020,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30542,2020,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30543,2020,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Trade School,1
+30544,2020,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Trade School,1
+30545,2020,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,Employment,1
+30546,2020,Dogwood Academy,DA,12,Female,Asian,Hispanic,Trade School,1
+30547,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30548,2020,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30549,2020,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Trade School,1
+30550,2020,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30551,2020,Sycamore Academy,SA,12,Female,African American,Hispanic,Employment,1
+30552,2020,Hickory Academy,HA,12,Male,White,Hispanic,Trade School,1
+30553,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,2 Year College,1
+30554,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30555,2020,Chestnut Academy,CA,12,Male,African American,Hispanic,Trade School,1
+30556,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30557,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30558,2020,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30559,2020,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30560,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30561,2020,Chestnut Academy,CA,12,Female,American Indian,Hispanic,4 Year College,1
+30562,2020,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30563,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30564,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30565,2020,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,2 Year College,1
+30566,2020,Dogwood Academy,DA,12,Female,Asian,Hispanic,4 Year College,1
+30567,2020,Hickory Academy,HA,12,Female,White,Hispanic,Trade School,1
+30568,2020,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Trade School,1
+30569,2020,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30570,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30571,2020,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
+30572,2020,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30573,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30574,2020,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30575,2020,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30576,2020,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30577,2020,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30578,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Employment,1
+30579,2020,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30580,2020,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30581,2020,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30582,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30583,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30584,2020,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30585,2020,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+30586,2020,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30587,2020,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30588,2020,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30589,2020,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30590,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30591,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30592,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30593,2021,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30594,2021,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30595,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30596,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30597,2021,Hickory Academy,HA,12,Female,White,Hispanic,Trade School,1
+30598,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30599,2021,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30600,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30601,2021,Chestnut Academy,CA,12,Male,African American,Hispanic,Employment,1
+30602,2021,Dogwood Academy,DA,12,Male,Asian,Hispanic,4 Year College,1
+30603,2021,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30604,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,2 Year College,1
+30605,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,Other/Unknown,1
+30606,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30607,2021,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30608,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Trade School,1
+30609,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30610,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30611,2021,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30612,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30613,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30614,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,2 Year College,1
+30615,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30616,2021,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30617,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30618,2021,Sycamore Academy,SA,12,Male,White,Hispanic,Employment,1
+30619,2021,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30620,2021,Hickory Academy,HA,12,Female,African American,Hispanic,Other/Unknown,1
+30621,2021,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30622,2021,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Employment,1
+30623,2021,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Trade School,1
+30624,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30625,2021,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30626,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30627,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30628,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Employment,1
+30629,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30630,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30631,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30632,2021,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30633,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30634,2021,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Trade School,1
+30635,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30636,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30637,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30638,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30639,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30640,2021,Hickory Academy,HA,12,Male,White,Hispanic,Other/Unknown,1
+30641,2021,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30642,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30643,2021,Hickory Academy,HA,12,Male,Asian,Hispanic,4 Year College,1
+30644,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30645,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30646,2021,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30647,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30648,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30649,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30650,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Trade School,1
+30651,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30652,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,Employment,1
+30653,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,2 Year College,1
+30654,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30655,2021,Hickory Academy,HA,12,Male,White,Hispanic,Trade School,1
+30656,2021,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30657,2021,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30658,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30659,2021,Chestnut Academy,CA,12,Female,Asian,Hispanic,4 Year College,1
+30660,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30661,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30662,2021,Sycamore Academy,SA,12,Male,American Indian,Hispanic,4 Year College,1
+30663,2021,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Other/Unknown,1
+30664,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Trade School,1
+30665,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30666,2021,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30667,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30668,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30669,2021,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,Employment,1
+30670,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,2 Year College,1
+30671,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Employment,1
+30672,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30673,2021,Chestnut Academy,CA,12,Male,Asian,Hispanic,2 Year College,1
+30674,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30675,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30676,2021,Hickory Academy,HA,12,Male,American Indian,Hispanic,Trade School,1
+30677,2021,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Employment,1
+30678,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30679,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30680,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30681,2021,Hickory Academy,HA,12,Male,American Indian,Non-Hispanic,Trade School,1
+30682,2021,Dogwood Academy,DA,12,Female,Asian,Hispanic,Trade School,1
+30683,2021,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30684,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30685,2021,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30686,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30687,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30688,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30689,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+30690,2021,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Trade School,1
+30691,2021,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Trade School,1
+30692,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Trade School,1
+30693,2021,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30694,2021,Hickory Academy,HA,12,Female,White,Hispanic,4 Year College,1
+30695,2021,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Other/Unknown,1
+30696,2021,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30697,2021,Sycamore Academy,SA,12,Male,White,Hispanic,Other/Unknown,1
+30698,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30699,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30700,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30701,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,2 Year College,1
+30702,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Trade School,1
+30703,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30704,2021,Sycamore Academy,SA,12,Male,Asian,Hispanic,Employment,1
+30705,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Employment,1
+30706,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30707,2021,Sycamore Academy,SA,12,Male,American Indian,Hispanic,4 Year College,1
+30708,2021,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+30709,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30710,2021,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30711,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30712,2021,Sycamore Academy,SA,12,Male,Asian,Hispanic,Employment,1
+30713,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,2 Year College,1
+30714,2021,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30715,2021,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30716,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30717,2021,Sycamore Academy,SA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30718,2021,Hickory Academy,HA,12,Male,White,Hispanic,Trade School,1
+30719,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30720,2021,Chestnut Academy,CA,12,Male,Asian,Hispanic,4 Year College,1
+30721,2021,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30722,2021,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30723,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30724,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30725,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30726,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Trade School,1
+30727,2021,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30728,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30729,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30730,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,Employment,1
+30731,2021,Dogwood Academy,DA,12,Male,White,Hispanic,2 Year College,1
+30732,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30733,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Employment,1
+30734,2021,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30735,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30736,2021,Sycamore Academy,SA,12,Female,White,Hispanic,Employment,1
+30737,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30738,2021,Hickory Academy,HA,12,Female,White,Hispanic,2 Year College,1
+30739,2021,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30740,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Employment,1
+30741,2021,Hickory Academy,HA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30742,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,2 Year College,1
+30743,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30744,2021,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30745,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30746,2021,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Trade School,1
+30747,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+30748,2021,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30749,2021,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30750,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Employment,1
+30751,2021,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,4 Year College,1
+30752,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30753,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Employment,1
+30754,2021,Chestnut Academy,CA,12,Female,White,Hispanic,Employment,1
+30755,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30756,2021,Chestnut Academy,CA,12,Male,White,Hispanic,Employment,1
+30757,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30758,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30759,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30760,2021,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30761,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30762,2021,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30763,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30764,2021,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30765,2021,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30766,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30767,2021,Dogwood Academy,DA,12,Female,African American,Hispanic,Employment,1
+30768,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30769,2021,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30770,2021,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30771,2021,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30772,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30773,2021,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30774,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30775,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Trade School,1
+30776,2021,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Trade School,1
+30777,2021,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30778,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30779,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30780,2021,Dogwood Academy,DA,12,Female,American Indian,Hispanic,4 Year College,1
+30781,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30782,2021,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30783,2021,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30784,2021,Hickory Academy,HA,12,Male,African American,Non-Hispanic,2 Year College,1
+30785,2021,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30786,2021,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30787,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Trade School,1
+30788,2021,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30789,2021,Dogwood Academy,DA,12,Female,White,Hispanic,Other/Unknown,1
+30790,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30791,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,Other/Unknown,1
+30792,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,2 Year College,1
+30793,2021,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,Trade School,1
+30794,2021,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30795,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30796,2021,Hickory Academy,HA,12,Male,Asian,Hispanic,Other/Unknown,1
+30797,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Employment,1
+30798,2021,Hickory Academy,HA,12,Male,Asian,Hispanic,4 Year College,1
+30799,2021,Dogwood Academy,DA,12,Male,African American,Hispanic,2 Year College,1
+30800,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,Employment,1
+30801,2021,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,Trade School,1
+30802,2021,Chestnut Academy,CA,12,Female,American Indian,Hispanic,4 Year College,1
+30803,2021,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+30804,2021,Chestnut Academy,CA,12,Male,American Indian,Hispanic,4 Year College,1
+30805,2021,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30806,2021,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30807,2021,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30808,2021,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,2 Year College,1
+30809,2021,Hickory Academy,HA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30810,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30811,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Trade School,1
+30812,2021,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30813,2021,Dogwood Academy,DA,12,Male,Asian,Hispanic,Trade School,1
+30814,2021,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30815,2021,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30816,2021,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,Employment,1
+30817,2021,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,Trade School,1
+30818,2021,Dogwood Academy,DA,12,Male,White,Hispanic,Other/Unknown,1
+30819,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30820,2021,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30821,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30822,2021,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30823,2021,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30824,2021,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30825,2022,Dogwood Academy,DA,12,Female,Asian,Hispanic,4 Year College,1
+30826,2022,Sycamore Academy,SA,12,Male,Asian,Hispanic,4 Year College,1
+30827,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30828,2022,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30829,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Employment,1
+30830,2022,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30831,2022,Hickory Academy,HA,12,Female,African American,Non-Hispanic,Trade School,1
+30832,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30833,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30834,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30835,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30836,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30837,2022,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,Trade School,1
+30838,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30839,2022,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30840,2022,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30841,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Employment,1
+30842,2022,Chestnut Academy,CA,12,Male,Asian,Hispanic,4 Year College,1
+30843,2022,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30844,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30845,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30846,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,2 Year College,1
+30847,2022,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30848,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,Employment,1
+30849,2022,Sycamore Academy,SA,12,Female,Asian,Hispanic,Employment,1
+30850,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Other/Unknown,1
+30851,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30852,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30853,2022,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Trade School,1
+30854,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30855,2022,Sycamore Academy,SA,12,Male,American Indian,Hispanic,Trade School,1
+30856,2022,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30857,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30858,2022,Sycamore Academy,SA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30859,2022,Sycamore Academy,SA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30860,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+30861,2022,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30862,2022,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30863,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30864,2022,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30865,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Employment,1
+30866,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30867,2022,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30868,2022,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30869,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30870,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30871,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30872,2022,Hickory Academy,HA,12,Male,Asian,Hispanic,4 Year College,1
+30873,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Trade School,1
+30874,2022,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30875,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30876,2022,Dogwood Academy,DA,12,Male,White,Hispanic,Employment,1
+30877,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30878,2022,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30879,2022,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30880,2022,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30881,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Employment,1
+30882,2022,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30883,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,Other/Unknown,1
+30884,2022,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30885,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+30886,2022,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30887,2022,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30888,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30889,2022,Sycamore Academy,SA,12,Male,Asian,Hispanic,4 Year College,1
+30890,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30891,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30892,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30893,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,Employment,1
+30894,2022,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Trade School,1
+30895,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30896,2022,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30897,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30898,2022,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30899,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30900,2022,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30901,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30902,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30903,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30904,2022,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30905,2022,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30906,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30907,2022,Hickory Academy,HA,12,Female,American Indian,Hispanic,4 Year College,1
+30908,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30909,2022,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+30910,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Employment,1
+30911,2022,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30912,2022,Sycamore Academy,SA,12,Female,Asian,Hispanic,Employment,1
+30913,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30914,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+30915,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30916,2022,Hickory Academy,HA,12,Male,White,Hispanic,Employment,1
+30917,2022,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,Trade School,1
+30918,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,Employment,1
+30919,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,Trade School,1
+30920,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30921,2022,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30922,2022,Dogwood Academy,DA,12,Male,African American,Non-Hispanic,Trade School,1
+30923,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30924,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30925,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Trade School,1
+30926,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,Employment,1
+30927,2022,Sycamore Academy,SA,12,Female,American Indian,Hispanic,4 Year College,1
+30928,2022,Hickory Academy,HA,12,Male,African American,Non-Hispanic,4 Year College,1
+30929,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30930,2022,Dogwood Academy,DA,12,Female,African American,Hispanic,Trade School,1
+30931,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+30932,2022,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30933,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30934,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+30935,2022,Chestnut Academy,CA,12,Male,American Indian,Hispanic,4 Year College,1
+30936,2022,Sycamore Academy,SA,12,Female,White,Hispanic,Trade School,1
+30937,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30938,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Employment,1
+30939,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,Trade School,1
+30940,2022,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Employment,1
+30941,2022,Hickory Academy,HA,12,Female,African American,Non-Hispanic,4 Year College,1
+30942,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,Trade School,1
+30943,2022,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30944,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30945,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30946,2022,Hickory Academy,HA,12,Male,African American,Hispanic,4 Year College,1
+30947,2022,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30948,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30949,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30950,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Trade School,1
+30951,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+30952,2022,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+30953,2022,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+30954,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,Employment,1
+30955,2022,Hickory Academy,HA,12,Male,White,Hispanic,4 Year College,1
+30956,2022,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+30957,2022,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+30958,2022,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30959,2022,Sycamore Academy,SA,12,Male,American Indian,Non-Hispanic,Trade School,1
+30960,2022,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+30961,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30962,2022,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,Employment,1
+30963,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30964,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30965,2022,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+30966,2022,Chestnut Academy,CA,12,Female,American Indian,Non-Hispanic,4 Year College,1
+30967,2022,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30968,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30969,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+30970,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30971,2022,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30972,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30973,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+30974,2022,Chestnut Academy,CA,12,Female,White,Hispanic,Trade School,1
+30975,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+30976,2022,Sycamore Academy,SA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30977,2022,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+30978,2022,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+30979,2022,Chestnut Academy,CA,12,Female,Asian,Hispanic,4 Year College,1
+30980,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+30981,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+30982,2022,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+30983,2022,Dogwood Academy,DA,12,Male,Asian,Hispanic,4 Year College,1
+30984,2022,Dogwood Academy,DA,12,Male,Asian,Hispanic,2 Year College,1
+30985,2022,Dogwood Academy,DA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+30986,2022,Hickory Academy,HA,12,Female,Asian,Hispanic,4 Year College,1
+30987,2022,Chestnut Academy,CA,12,Female,African American,Non-Hispanic,4 Year College,1
+30988,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30989,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+30990,2022,Hickory Academy,HA,12,Female,White,Non-Hispanic,Employment,1
+30991,2022,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30992,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,2 Year College,1
+30993,2022,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+30994,2022,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+30995,2022,Chestnut Academy,CA,12,Female,White,Hispanic,Other/Unknown,1
+30996,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+30997,2022,Sycamore Academy,SA,12,Female,African American,Hispanic,4 Year College,1
+30998,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+30999,2022,Dogwood Academy,DA,12,Male,African American,Hispanic,4 Year College,1
+31000,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,Other/Unknown,1
+31001,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+31002,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Trade School,1
+31003,2022,Hickory Academy,HA,12,Female,White,Hispanic,Employment,1
+31004,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31005,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,2 Year College,1
+31006,2022,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,Employment,1
+31007,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+31008,2022,Dogwood Academy,DA,12,Female,White,Non-Hispanic,4 Year College,1
+31009,2022,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+31010,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+31011,2022,Sycamore Academy,SA,12,Male,Asian,Hispanic,4 Year College,1
+31012,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+31013,2022,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+31014,2022,Chestnut Academy,CA,12,Female,White,Hispanic,4 Year College,1
+31015,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+31016,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31017,2022,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+31018,2022,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Employment,1
+31019,2022,Sycamore Academy,SA,12,Female,Asian,Hispanic,4 Year College,1
+31020,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,2 Year College,1
+31021,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,Other/Unknown,1
+31022,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,Employment,1
+31023,2022,Chestnut Academy,CA,12,Male,White,Hispanic,Trade School,1
+31024,2022,Sycamore Academy,SA,12,Female,White,Hispanic,Trade School,1
+31025,2022,Hickory Academy,HA,12,Male,White,Non-Hispanic,4 Year College,1
+31026,2022,Chestnut Academy,CA,12,Male,White,Hispanic,4 Year College,1
+31027,2022,Sycamore Academy,SA,12,Male,White,Hispanic,Trade School,1
+31028,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+31029,2022,Dogwood Academy,DA,12,Female,African American,Non-Hispanic,4 Year College,1
+31030,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+31031,2022,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+31032,2022,Hickory Academy,HA,12,Female,African American,Hispanic,4 Year College,1
+31033,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+31034,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,Employment,1
+31035,2022,Dogwood Academy,DA,12,Female,White,Hispanic,4 Year College,1
+31036,2022,Chestnut Academy,CA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31037,2022,Hickory Academy,HA,12,Male,American Indian,Hispanic,4 Year College,1
+31038,2022,Hickory Academy,HA,12,Male,American Indian,Hispanic,4 Year College,1
+31039,2022,Sycamore Academy,SA,12,Female,White,Hispanic,4 Year College,1
+31040,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,Trade School,1
+31041,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,Employment,1
+31042,2022,Hickory Academy,HA,12,Male,Asian,Non-Hispanic,4 Year College,1
+31043,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+31044,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+31045,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,4 Year College,1
+31046,2022,Hickory Academy,HA,12,Female,American Indian,Non-Hispanic,Trade School,1
+31047,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,Employment,1
+31048,2022,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+31049,2022,Dogwood Academy,DA,12,Male,White,Hispanic,4 Year College,1
+31050,2022,Sycamore Academy,SA,12,Male,White,Non-Hispanic,4 Year College,1
+31051,2022,Sycamore Academy,SA,12,Male,African American,Hispanic,4 Year College,1
+31052,2022,Dogwood Academy,DA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31053,2022,Sycamore Academy,SA,12,Male,African American,Non-Hispanic,Trade School,1
+31054,2022,Sycamore Academy,SA,12,Male,American Indian,Non-Hispanic,4 Year College,1
+31055,2022,Chestnut Academy,CA,12,Female,African American,Hispanic,4 Year College,1
+31056,2022,Chestnut Academy,CA,12,Male,African American,Hispanic,4 Year College,1
+31057,2022,Chestnut Academy,CA,12,Female,White,Non-Hispanic,4 Year College,1
+31058,2022,Dogwood Academy,DA,12,Male,White,Non-Hispanic,4 Year College,1
+31059,2022,Dogwood Academy,DA,12,Male,Asian,Non-Hispanic,4 Year College,1
+31060,2022,Sycamore Academy,SA,12,Female,White,Non-Hispanic,4 Year College,1
+31061,2022,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,Employment,1
+31062,2022,Sycamore Academy,SA,12,Female,African American,Non-Hispanic,4 Year College,1
+31063,2022,Hickory Academy,HA,12,Female,White,Non-Hispanic,Trade School,1
+31064,2022,Chestnut Academy,CA,12,Male,African American,Non-Hispanic,4 Year College,1
+31065,2022,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31066,2022,Dogwood Academy,DA,12,Male,Asian,Hispanic,Trade School,1
+31067,2022,Sycamore Academy,SA,12,Female,Asian,Non-Hispanic,Trade School,1
+31068,2022,Hickory Academy,HA,12,Female,White,Non-Hispanic,4 Year College,1
+31069,2022,Hickory Academy,HA,12,Female,Asian,Non-Hispanic,4 Year College,1
+31070,2022,Chestnut Academy,CA,12,Male,White,Non-Hispanic,4 Year College,1
+31071,2022,Sycamore Academy,SA,12,Male,White,Hispanic,4 Year College,1
+31072,2022,Dogwood Academy,DA,12,Male,White,Hispanic,Trade School,1
+31073,2022,Chestnut Academy,CA,12,Male,Asian,Non-Hispanic,4 Year College,1
+31074,2022,Dogwood Academy,DA,12,Female,African American,Hispanic,4 Year College,1
