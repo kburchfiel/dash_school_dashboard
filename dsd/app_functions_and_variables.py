@@ -3,22 +3,25 @@
 # By Kenneth Burchfiel
 # Released under the MIT license
 
-
-# Defining these functions and variables in a separate file helps keep
-# the rest of the app code cleaner.
+# This folder contains a number of essential functions and variables that allow
+# the app to retrieve, reformat, and display data. Defining these functions 
+# and variables in a separate file helps keep the rest of the app code cleaner. 
+# It also reduces the total length of the codebase, since I can access the 
+# functions stored here within multiple parts of the app.
 
 import plotly.express as px
 import pandas as pd
 import platform
 import sqlalchemy
 import dash_bootstrap_components as dbc
+# This is a great library for enhancing both the look and functionality of 
+# the app.
 # See https://dash-bootstrap-components.opensource.faculty.ai/examples/iris/#sourceCode
 import dash
 from dash import Dash, html, dcc, Output, Input
 
 
-# Determining where the program is being run and how to access
-# data:
+# Determining where the program is being run and how to access data:
 
 # The following code checks whether the output of platform.node() is equal
 # to the network name of my laptop. If it is, I know that the code is running
@@ -32,7 +35,8 @@ from dash import Dash, html, dcc, Output, Input
 # offline_mode is set to False if platform.node() = localhost.
 
 print("Computer's network name:", platform.node())
-if platform.node() == 'DESKTOP-83K77J1':
+if platform.node() == 'DESKTOP-83K77J1': # Change this to your own computer's
+    # network name
     offline_mode = True
 else:
     offline_mode = False
@@ -43,36 +47,43 @@ read_from_online_db = False # When both this variable and offline_mode are set
 # will always read from the online database regardless of the value of
 # read_from_online_db.)
 
-
-
-# Functions:
-
-
 def create_database_engine():
     '''This function allows us to create a SQLAlchemy engine that can connect
     to our database. 
+
     We will utilize two different methods of retrieving the online PostgreSQL 
-    database's URL (which will play a crucial role in creating the engine).
-    If offline_mode is True, we'll get the URL from a local folder. 
+    database's URL (which will play a crucial role in creating the engine). If 
+    offline_mode is True, we'll get the URL from a local folder. 
     If it's instead set to False, we'll access the key through 
-    Google Cloud's Secret manager service.'''
+    Google Cloud's Secret manager service.
+    
+    The URL itelf can be found within the database's home page on
+    elephantsql.com. As shown below, 
+    SQLAlchemy can use this URL to connect to the database. The setup will
+    likely vary somewhat for other database providers, particularly if
+    you are not using a PostgreSQL database.
+    
+    '''
     if offline_mode == True: 
+        # The following code is based on my computer's folder structure,
+        # so you'll probably need to update it on your end in order
+        # to direct the code to the location of your database's URL.
         with open ("../../key_paths/path_to_keys_folder.txt") as file:
             key_path = file.read()
         with open(key_path+"/elephantsql_dashschooldemodb_url.txt") as file:
             db_url = file.read()
-        # This code reads in my database's URL, which is listed on the home page for my database within elephantsql.com. As shown below, SQLAlchemy can use this URL to connect to the database. 
-
+        
     else: # The URL for the ElephantSQL database will
     # be accessed through a Secret Manager volume stored online
         with open('/projsecrets/elephant-sql-db-url') as file:
             db_url = file.read()
-        # Based on https://stackoverflow.com/questions/68533094/how-do-i-access-mounted-secrets-when-using-google-cloud-run
+        # Based on:
+        # https://stackoverflow.com/questions/68533094/how-do-i-access-mounted-secrets-when-using-google-cloud-run
         # In order for this step to work, I needed to go to 
-        # https://console.cloud.google.com/run , select 'Edit & Deploy New Revision,'
-        # and then mount my secret (which I had created earlier) as a volume. 
-        # (I chose 'projsecrets' as my volume
-        # name.
+        # https://console.cloud.google.com/run , select 'Edit & Deploy 
+        # New Revision,'and then mount my secret (which I had created earlier) 
+        # as a volume. 
+        # (I chose 'projsecrets' as my volume name.)
         # Note that the Secret Manager Secret Accessor role must be enabled for 
         # your service account for your code to work, as noted here:
         # https://cloud.google.com/run/docs/configuring/secrets#access-secret
@@ -80,22 +91,37 @@ def create_database_engine():
     # Now that we've retrieved the URL, we can use it to connect to the
     # online database. 
 
-    elephantsql_db_url_for_sqlalchemy = db_url.replace('postgres://', 'postgresql://')
-    # This change, which is required for SQLAlchemy to work correctly, is based on the code suggested at:
-    # # https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres
+    elephantsql_db_url_for_sqlalchemy = db_url.replace(
+    'postgres://', 'postgresql://')
+    # This change, which is required for SQLAlchemy to work correctly, 
+    # is based on the code suggested at:
+    # https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres
 
-    elephantsql_engine = sqlalchemy.create_engine(elephantsql_db_url_for_sqlalchemy)
+    elephantsql_engine = sqlalchemy.create_engine(
+    elephantsql_db_url_for_sqlalchemy)
+    # See https://docs.sqlalchemy.org/en/20/core/engines.html
     return elephantsql_engine
 
 # Using create_database_engine() to create an elephantsql engine that we can
-# use in subsequent code:
-elephantsql_engine = create_database_engine()
+# use in subsequent code: 
+# (We'll only need this engine in certain cases, however, hence
+# the inclusion of an if statement.)
+if (offline_mode == False) or (read_from_online_db == True): 
+    elephantsql_engine = create_database_engine()
 
 def retrieve_data_from_table(table_name):
-    '''This function retrieves all data from a given database table. 
-    In order for it to work correctly, the name of the offline .csv file
-    that contains the table must be the same as the table name within
-    the online database.'''
+    '''This function retrieves all data from a given database table. This
+    may be performed online or through an offline import of a .csv file
+    containing a copy of this table.
+
+    If you only need a portion of the data stored in a given table,
+    your app may run faster if you define and use a separate read_sql()
+    call that retrieves only that portion of the data.
+
+    In order for this function to work correctly, 
+    the name of the offline .csv file that contains the table 
+    must be the same as the table name within the online database.'''
+
     print("offline_mode is set to:", offline_mode)
     print("read_from_online_db is set to:", read_from_online_db)
     if (offline_mode == True) and (read_from_online_db == False):
@@ -105,40 +131,46 @@ def retrieve_data_from_table(table_name):
         df_query = pd.read_csv(f'../{table_name}.csv')
     else:
         print("Reading from online database")
-        df_query = pd.read_sql(f"select * from {table_name}", con = elephantsql_engine)
+        df_query = pd.read_sql(f"select * from {table_name}", 
+        con = elephantsql_engine)
         
-    
     return df_query
 
-# Retrieving all current enrollment data: (Initializing df_curr_enrollment
-# here will make it easier (and perhaps faster) 
+# Retrieving all current enrollment data: 
+# (Initializing df_curr_enrollment
+# here will make it easier, and perhaps faster,
 # to use this data within multiple DataFrames.)
 df_curr_enrollment = retrieve_data_from_table(table_name = 'curr_enrollment')
 
-
+# Defining a standard set of values by which we would like to compare
+# our fictional student data:
 enrollment_comparisons = ['School', 'Grade', 'Gender',
 'Race', 'Ethnicity'] 
 
 # The following code creates a copy of enrollment_comparisons with a
-# 'None' option (that will get converted to the Python value of None)
+# 'None' option
 # so that users can choose not to select a given value.
 enrollment_comparisons_plus_none = enrollment_comparisons.copy()
 enrollment_comparisons_plus_none.append('None')
 
+# This dictionary will be used to help order grades correctly within charts.
+# Without this reordering, K will often appear at the end of grade-based
+# charts.
 grade_reordering_map = {'K':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, 
         '7':7, '8':8, '9':9, '10':10, '11':11, '12':12, 1:1, 2:2, 3:3, 
-        4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 11:11, 12:12} # This dictionary
-    # will be used to help order grades correctly (i.e. K-12) within charts.
+        4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 11:11, 12:12} 
+
 
 def merge_demographics_into_df(df):
     '''This function merges demographic variables from df_current_enrollment
     into the DataFrame passed to df, then returns the new version
     of the DataFrame.'''
+
     # Creating a copy of df_current_enrollment that only contains 
     # Student IDs (which will serve as the key for the merge) and 
     # the demographic values contained in enrollment_comparisons:
     df_curr_enrollment_for_merge = df_curr_enrollment.copy(
-        )[['Student_ID'] + enrollment_comparisons]
+    )[['Student_ID'] + enrollment_comparisons]
     # Some of these demographic values may already be present within 
     # the DataFrame, in which case they should be removed from
     # df_curr_enrollment_for_merge so that we don't end up with multiple
@@ -189,7 +221,8 @@ def create_filters_and_comparisons(df, default_comparison_option = ['School']):
             dbc.Col('Ethnicities:', lg = 1),
             dbc.Col(
                 dcc.Dropdown(df_curr_enrollment['Ethnicity'].unique(), 
-                list(df_curr_enrollment['Ethnicity'].unique()), id='ethnicity_filter', 
+                list(df_curr_enrollment['Ethnicity'].unique()), 
+                id='ethnicity_filter', 
                 multi=True), lg = 4)            
                 ]),
 
@@ -299,8 +332,9 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
         secondary_differentiator = None
 
 
-    print("Current state of color_value:",color_value, type(color_value))
-    print("Current state of secondary_differentiator:",secondary_differentiator, type(secondary_differentiator))
+    # print("Current state of color_value:",color_value, type(color_value))
+    # print("Current state of secondary_differentiator:",
+    # secondary_differentiator, type(secondary_differentiator))
 
 
     print("Filter list:",filter_list)
@@ -386,10 +420,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
         print(data_descriptor_values)   
         data_descriptor = data_source_pivot[
-            data_descriptor_values[0]].copy().astype('str') # This line initializes 
-            # data_descriptor as the first item within data_descriptor_values.
-            # copy() is needed in order to avoid modifying this column when
-        # the group column gets chosen.
+            data_descriptor_values[0]].copy().astype('str') # This line 
+        # initializes data_descriptor as the first item within 
+        # data_descriptor_values. copy() is needed in order to avoid 
+        # modifying this column when the group column gets chosen.
         # The following for loop iterates through each column name (except
         # for the initial column, which has already been added
         # to data_descriptor) in order to set data_descriptor with all the
@@ -398,8 +432,8 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
         # choices and different column counts.
         for i in range(1, len(data_descriptor_values)):
             data_descriptor += ' ' + data_source_pivot[
-                data_descriptor_values[i]].astype('str') # This line adds the value of a 
-                # given column to data_descriptor.
+                data_descriptor_values[i]].astype('str') # This line adds 
+                # the value of a given column to data_descriptor.
 
     data_source_pivot['Group'] = data_descriptor # This group column will be 
     # used as the x value of the histogram.
