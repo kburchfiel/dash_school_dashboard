@@ -1,20 +1,25 @@
+# Code for Test Results dashboard
+
 # By Kenneth Burchfiel
 # Released under the MIT license
 
-# Additional documentation can be found within
+# Additional documentation for this code can be found within
 # current_enrollment.py.
 
 import dash
 from dash import Dash, html, dcc, callback, Output, Input, dash_table
 import plotly.express as px
 
-from app_functions_and_variables import offline_mode, read_from_online_db, df_curr_enrollment, create_filters_and_comparisons, grade_reordering_map, create_pivot_for_charts, create_interactive_line_chart_and_table, retrieve_data_from_table, merge_demographics_into_df
+from app_functions_and_variables import offline_mode, read_from_online_db, \
+df_curr_enrollment, create_filters_and_comparisons, grade_reordering_map, \
+create_pivot_for_charts, create_interactive_line_chart_and_table, \
+retrieve_data_from_table, merge_demographics_into_df
+
 import pandas as pd
 import sqlalchemy
 import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path = '/test_results')
-# See https://dash.plotly.com/urls
 
 
 df_test_results = retrieve_data_from_table('test_results')
@@ -25,11 +30,13 @@ df_test_results = retrieve_data_from_table('test_results')
 # extra values.
 df_test_results = merge_demographics_into_df(df_test_results)
 
-
-
 layout = dbc.Container([
-      
     create_filters_and_comparisons(df_test_results),
+    dbc.Row([dbc.Col('(Only the first two comparison options will be used \
+within the line chart.)')]), # The line chart, unlike the bar charts in
+# current_enrollment.py and grad_outcomes.py, is limited to two comparison
+# options, so this message advises users not to select more than two
+# comparisons.
         dcc.Graph(id='test_results_chart'),
         dash_table.DataTable(id = "test_results_table",
     export_format = 'csv', 
@@ -83,10 +90,12 @@ def update_graph(school_filter, grade_filter,
 
     test_results_pivot = create_pivot_for_charts(
         original_data_source=df_test_results, y_value = 'Score', 
-        comparison_values = ['Period']+enrollment_comparisons, pivot_aggfunc= 'mean', 
-        filter_list = filter_list, color_value = color_variable, 
-        secondary_differentiator = line_dash_variable, reorder_bars_by = 'Grade', 
-        reordering_map = grade_reordering_map, debug = True)
+        comparison_values = ['Period']+enrollment_comparisons, 
+        pivot_aggfunc= 'mean', filter_list = filter_list, 
+        color_value = color_variable, 
+        secondary_differentiator = line_dash_variable, 
+        reorder_bars_by = 'Grade', reordering_map = grade_reordering_map, 
+        debug = True)
 
     return create_interactive_line_chart_and_table(
         data_source_pivot = test_results_pivot, y_value = 'Score', 

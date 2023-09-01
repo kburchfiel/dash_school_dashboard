@@ -3,7 +3,7 @@
 # By Kenneth Burchfiel
 # Released under the MIT license
 
-# This folder contains a number of essential functions and variables that allow
+# This file contains a number of essential functions and variables that allow
 # the app to retrieve, reformat, and display data. Defining these functions 
 # and variables in a separate file helps keep the rest of the app code cleaner. 
 # It also reduces the total length of the codebase, since I can access the 
@@ -189,43 +189,58 @@ def create_filters_and_comparisons(df, default_comparison_option = ['School']):
     them within a function allows me to use them for multiple charts,
     thus simplifying my code.
     
+    df refers to the DataFrame from which you would like to retrieve
+    comparison options. This should generally be the same DataFrame
+    on which visualizations will be based. Otherwise, the user will
+    be presented with options that don't match the actual options
+    found in the DataFrame.
+
     default_comparison_option allows you to choose the initial comparison 
     group that will be presented to the user. If you do not wish to show
     any comparisons by default, set this variable to [].
     '''
+
+    # This Dash Bootstrap Components documentation page proved very
+    # helpful in developing this code:
+    # https://dash-bootstrap-components.opensource.faculty.ai/docs/components/layout/
+    # The Dash documentation on dcc.Dropdown was very helpful also. It's 
+    # available at https://dash.plotly.com/dash-core-components/dropdown
+
     filters_and_comparisons = html.Div([
+        # Generating filter options:
         dbc.Row(
             [dbc.Col('Schools:', lg = 1),
             dbc.Col(
-                dcc.Dropdown(df_curr_enrollment['School'].unique(), 
-                list(df_curr_enrollment['School'].unique()), 
+                dcc.Dropdown(df['School'].unique(), 
+                list(df['School'].unique()), 
                 id='school_filter', multi=True), lg = 4), 
             dbc.Col('Genders:', lg = 1),
             dbc.Col(
-                dcc.Dropdown(df_curr_enrollment['Gender'].unique(), 
-                list(df_curr_enrollment['Gender'].unique()), id='gender_filter', 
+                dcc.Dropdown(df['Gender'].unique(), 
+                list(df['Gender'].unique()), id='gender_filter', 
                 multi=True), lg = 3)
                 ]),
         dbc.Row([
             dbc.Col('Grades:', lg = 1),
             dbc.Col(
-                dcc.Dropdown(df_curr_enrollment['Grade'].unique(), 
-                list(df_curr_enrollment['Grade'].unique()), id='grade_filter', 
+                dcc.Dropdown(df['Grade'].unique(), 
+                list(df['Grade'].unique()), id='grade_filter', 
                 multi=True))]),
         dbc.Row([
             dbc.Col('Races:', lg = 1),
             dbc.Col(
-                dcc.Dropdown(df_curr_enrollment['Race'].unique(), 
-                list(df_curr_enrollment['Race'].unique()), id='race_filter', 
+                dcc.Dropdown(df['Race'].unique(), 
+                list(df['Race'].unique()), id='race_filter', 
                 multi=True), lg = 6),
             dbc.Col('Ethnicities:', lg = 1),
             dbc.Col(
-                dcc.Dropdown(df_curr_enrollment['Ethnicity'].unique(), 
-                list(df_curr_enrollment['Ethnicity'].unique()), 
+                dcc.Dropdown(df['Ethnicity'].unique(), 
+                list(df['Ethnicity'].unique()), 
                 id='ethnicity_filter', 
                 multi=True), lg = 4)            
                 ]),
 
+        # Generating comparison options:
         dbc.Row(
             [dbc.Col('Comparison Options:', lg=2),
             dbc.Col(
@@ -237,7 +252,11 @@ def create_filters_and_comparisons(df, default_comparison_option = ['School']):
 
 def create_color_and_pattern_variable_dropdowns(color_default = 'School',
     pattern_default = 'None'):
-    '''This code used to be part of create_filters_and_comparisons,
+    '''This function makes it easier to insert color and pattern variable
+    options into a dashboard. These options will allow the user to modify
+    the appearance of the dashboard's visualization(s).
+    
+    This code used to be part of create_filters_and_comparisons,
     but I found that it is sometimes better to have the code define
     these variables than for the user to be able to select them.
     Therefore, I moved them to a standalone function so that they 
@@ -245,6 +264,10 @@ def create_color_and_pattern_variable_dropdowns(color_default = 'School',
     
     The color_default and pattern_default variables allow you to choose
     default entries for color_variable and pattern_variable if needed.'''
+
+    # Note that this code uses enrollment_comparisons_plus_none instead
+    # of enrollment_comparisons so that users can choose not to 
+    # select a color or pattern variable.
     color_and_pattern_variable_dropdowns = html.Div([dbc.Row(
     [dbc.Col('Color variable:', lg = 2),
     dbc.Col(
@@ -264,7 +287,17 @@ color_value = None, drop_color_value_from_x_vals = True,
 secondary_differentiator = None, 
 drop_secondary_differentiator_from_x_vals = True,
 reorder_bars_by = '', reordering_map = {}, debug = False):
-    '''original_data_source: The source of the data that will be graphed.
+    '''This function turns the DataFrame passed to original_data_source
+    into a pivot table that can serve as the basis for a Plotly chart. This 
+    code plays a crucial role in making the charts truly interactive, as
+    the comparisons and filters passed to this function will in turn
+    modify the pivot table's contents, thus allowing the resulting
+    visualizations to take on different forms.
+    This function does not perform any graphing tasks; those are carried out 
+    by separate functions defined later in this code. This setup allows
+    this function to support the creation of multiple graph types.
+    
+    original_data_source: The source of the data that will be graphed.
 
     y_value: The y value to use within the graph.
 
@@ -273,10 +306,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
     final bar chart. Set this to an empty list ([]) 
     if no comparison values will be used. 
 
-    pivot_aggfunc: the function ('mean', 'sum', 'count', etc.) to be passed
-    to the pivot_table() call.
+    pivot_aggfunc: The aggregate function ('mean', 'sum', 'count', etc.) 
+    to be passed to the pivot_table() call.
 
-    filter_list: a list of tuples that govern how the DataFrame will be 
+    filter_list: A list of tuples that govern how the DataFrame will be 
     filtered. The first component of each tuple is a column name; the second
     component is a list of values to include.
 
@@ -287,11 +320,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
     the code creates a column describing all (or almost all) of the 
     pivot index variables in the other columns, which then gets fed into 
     the x axis parameter of a histogram. However, if a color value is also 
-    specified, *and* drop_color_value_from_x_vals is set to True, this item 
-    will not get added into this column, since this
-    data will already get represented in the bar chart (by means of the color
-    legend). Removing this value helps
-    simplify the final chart output.
+    specified *and* drop_color_value_from_x_vals is set to True, this item 
+    will not get added into this column, since this data will already get 
+    represented in the bar chart (by means of the color legend). 
+    Removing this value helps simplify the final chart output.
 
     secondary_differentiator: Similar to color_value, this is 
     a second variable that will be represented via a chart feature 
@@ -306,15 +338,14 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
     reorder_bars_by and reordering_map: Variables that you can
     use to update the order of the bars in the resulting chart. For instance,
-    suppose you want to order the bars by a 'grade' column whose values
+    suppose you want to order the bars by a 'Grade' column whose values
     range from K (kindergarten) to 12. If these are stored as strings 
     (which they often will be due to the inclusion of 'K'),
     the first 5 bars will be 1, 10, 11, 12, and 2, and the 
-    last bar will be K. (That's because these bars are 
-    being treated alphabetically). However, by setting
+    last bar will be K. (That's because these x values are 
+    being sorted alphabetically). However, by setting
     reorder_bars_by to 'grade' and reordering_map to {'K':0, '1':1, '2':2, 
-    '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, '11':11, 
-    '12':12, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 11:11, 12:12},
+    '3':3, . . . '12':12},
     you can instruct the function to (1) create a new order for the grade
     column and then (2) sort the DataFrame based on this new order. This 
     sort operation will in turn reorder the bars so that 'K' comes first
@@ -322,7 +353,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
 
     Note: If you don't need to update the sort order of the values in the 
     column whose name was passed to reorder_bars_by, simply keep 
-    reordering_map as {}.'''
+    reordering_map as {}.
+    
+    debug: set to True to include additional print statements during
+    the function's execution.'''
 
     # Converting 'None' strings to None values:
     if color_value == 'None':
@@ -331,15 +365,13 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
     if secondary_differentiator == 'None':
         secondary_differentiator = None
 
+    if debug == True:
+        print("Current state of color_value:", color_value, type(color_value))
+        print("Current state of secondary_differentiator:",
+        secondary_differentiator, type(secondary_differentiator))
+        print("Filter list:",filter_list)
 
-    # print("Current state of color_value:",color_value, type(color_value))
-    # print("Current state of secondary_differentiator:",
-    # secondary_differentiator, type(secondary_differentiator))
-
-
-    print("Filter list:",filter_list)
-    data_source = original_data_source.copy() # Included to avoid modifying the
-    # original DataFrame (although this line may not be necessary)
+    data_source = original_data_source.copy()
     
     all_data_value = 'All'
 
@@ -402,7 +434,9 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
         
         # We'll now remove the variables stored in
         # color_value and secondary_differentiator from the chart if
-        # drop_color_value_from_x_vals and drop_
+        # drop_color_value_from_x_vals and 
+        # drop_secondary_differentiator_from_x_vals are set to True,
+        # respectively.
         if ((color_value != None) & (len(data_descriptor_values) > 1) 
             & (drop_color_value_from_x_vals == True)):
             data_descriptor_values.remove(color_value) 
@@ -416,18 +450,19 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
             (len(data_descriptor_values) > 1) 
             & (drop_secondary_differentiator_from_x_vals == True)):
             data_descriptor_values.remove(secondary_differentiator) 
-            
-
-        print(data_descriptor_values)   
+         
+        if debug == True:
+            print(data_descriptor_values)   
         data_descriptor = data_source_pivot[
             data_descriptor_values[0]].copy().astype('str') # This line 
         # initializes data_descriptor as the first item within 
         # data_descriptor_values. copy() is needed in order to avoid 
         # modifying this column when the group column gets chosen.
+
         # The following for loop iterates through each column name (except
         # for the initial column, which has already been added
-        # to data_descriptor) in order to set data_descriptor with all the
-        # the values present in data_descriptor_values.
+        # to data_descriptor) in order to add all of the values present in 
+        # data_descriptor_values to data_descriptor.
         # The use of a for loop allows this code to adapt to different variable
         # choices and different column counts.
         for i in range(1, len(data_descriptor_values)):
@@ -436,10 +471,10 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
                 # the value of a given column to data_descriptor.
 
     data_source_pivot['Group'] = data_descriptor # This group column will be 
-    # used as the x value of the histogram.
+    # used as the x value of the chart.
 
     # The following code reorders the rows in the pivot table
-    # in order to change the order of the bars in the ensuing chart.
+    # in order to change the order of the items in the ensuing chart.
     # See the description of reorder_bars_by and reordering_map
     # in the function docstring for more information.
     if (reorder_bars_by != '') & (reorder_bars_by in data_source_pivot.columns):
@@ -461,8 +496,9 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
             inplace = True) # This column is no longer needed,
             # so we can remove it from the DataFrame.
     
-    print("Pivot table created for charts/tables:")
-    print(data_source_pivot)
+    if debug == True:
+        print("Pivot table created for charts/tables:")
+        print(data_source_pivot)
     return data_source_pivot
 
 
@@ -474,12 +510,12 @@ table_round_precision = None):
     '''This function converts a pivot table (presumably one returned by
     create_pivot_for_charts() into an interactive bar chart and table.
 
-    data_source_pivot: The pivot table on which the chart will be based.
-    It is expected, but not required, that this table originate from
-    create_pivot_for_charts().
+    data_source_pivot: The pivot table that will serve as the foundation
+    for the chart. It is expected, but not required, that this table 
+    originate from create_pivot_for_charts().
 
     For definitions of y_value, comparison_values, and color_value,
-    see create_pivot_for_charts().
+    see the create_pivot_for_charts() documentation.
 
     color_discrete_map: A custom color mapping to pass to the chart.
 
@@ -519,13 +555,15 @@ table_round_precision = None):
     # will apply changes to copies of data_source_pivot so that the original
     # pivot table is not affected.
 
+    # Rounding table values if requested:
     if table_round_precision != None:
         data_source_pivot_for_table[y_value] = round(
             data_source_pivot_for_table[y_value], table_round_precision)
 
     table_data = data_source_pivot_for_table.to_dict('records') 
     # See https://dash.plotly.com/datatable
-
+    # This data will get returned at the end of the function so that it can
+    # serve as the basis for a data table within a dashboard.
 
     data_source_pivot_for_chart = data_source_pivot.copy()
 
@@ -548,20 +586,22 @@ table_round_precision = None):
     if secondary_differentiator not in comparison_values:
         secondary_differentiator = None
 
-
-    # Rounding y values to be shown in labels:
+    # Rounding y values to be shown in labels (if requested):
     if label_round_precision != None:
         data_source_pivot_for_chart[y_value] = round(
             data_source_pivot_for_chart[y_value], 
         label_round_precision)
 
+    # Creating the bar chart:
+    # px.histogram() is used instead of px.bar() in order to group different
+    # components of each bar together. For px.histogram() documentation,
+    # see https://plotly.com/python/histograms/
     output_histogram = px.histogram(data_source_pivot_for_chart, x = 'Group', 
     y = y_value, color = color_value, 
     barmode = selected_barmode, color_discrete_map=color_discrete_map,
     color_discrete_sequence=color_discrete_sequence,
     pattern_shape = secondary_differentiator, text_auto = text_auto
     )
-
 
     return output_histogram, table_data
 
@@ -631,6 +671,7 @@ table_round_precision = None):
     # will apply changes to copies of data_source_pivot so that the original
     # pivot table is not affected.
     
+    # Rounding table values (if requested):
     if table_round_precision != None:
         data_source_pivot_for_table[y_value] = round(
             data_source_pivot_for_table[y_value], table_round_precision)
@@ -642,7 +683,7 @@ table_round_precision = None):
     data_source_pivot_for_chart = data_source_pivot.copy()
 
 
-    # Rounding y values to be shown in labels:
+    # Rounding y values to be shown in labels (if requested):
     if label_round_precision != None:
         data_source_pivot_for_chart[y_value] = round(
             data_source_pivot_for_chart[y_value], 
@@ -654,12 +695,13 @@ table_round_precision = None):
     else:
         text = None
 
+    # For Plotly line chart documentation, see:
+    # https://plotly.com/python/line-charts/
     output_chart = px.line(data_source_pivot_for_chart, x = 'Group', 
     y = y_value, color = color_value,
     color_discrete_map=color_discrete_map,
     color_discrete_sequence=color_discrete_sequence,
     markers = markers, line_dash = secondary_differentiator, text = y_value
     )
-    # See https://plotly.com/python/line-charts/
-
+    
     return output_chart, table_data
