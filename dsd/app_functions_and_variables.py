@@ -386,7 +386,13 @@ reorder_bars_by = '', reordering_map = {}, debug = False):
             f"{filter[0]} in {filter[1]}", inplace = True)
     if debug == True:
         print("data_source_filtered:",data_source_filtered)
-
+        print("data_source_length:",len(data_source_filtered))
+    if len(data_source_filtered) == 0:
+        # In this case, the filters have excluded all results from the 
+        # DataFrame. We'll return the empty DataFrame here so that the user
+        # can see that all items have been filtered out.
+        print("All items have been filtered out. Returning empty DataFrame.")
+        return data_source_filtered.copy()
     # The color value must be present within the comparison_values
     # table. If it is not, the following line sets color_value to None.
     if color_value not in comparison_values:
@@ -506,7 +512,7 @@ def create_interactive_bar_chart_and_table(data_source_pivot, y_value,
 comparison_values, color_value = None, color_discrete_map = None, 
 barmode = 'group', color_discrete_sequence = px.colors.qualitative.Light24,
 secondary_differentiator = None, text_auto = True, label_round_precision = None,
-table_round_precision = None):
+table_round_precision = None, custom_x_label = None, custom_y_label = None):
     '''This function converts a pivot table (presumably one returned by
     create_pivot_for_charts() into an interactive bar chart and table.
 
@@ -541,7 +547,36 @@ table_round_precision = None):
     table_round_precision: This variable rounds table values in the same way
     that label_round_precision rounds label values.
 
+    custom_x_label and custom_y_label: Custom x and y axis titles that will
+    override the automatically generated axis titles. For instance,
+    if your y value is 'students', the chart's y axis title may read
+    'sum of students.' (The 'sum of' component is added in by Plotly.)
+    You can override this by setting custom_y_label to 'Enrollment.'
     '''
+
+    if len(data_source_pivot) == 0:
+        # In this case, there's no data to plot (i.e. because no values for
+        # a given filter were selected), so we'll end the function
+        # here by returning an empty chart and a table value of None.
+        # I had initially tried to return None for the chart also,
+        # but this (1) kept the pre-existing chart in place and (2) didn't
+        # allow any updates to be made. Therefore, I put together a basic
+        # empty chart using the y_value assed to the function and returned
+        # that instead. This approach allows the user to re-initialize
+        # the chart by adding an option to a blank filter menu.        
+        empty_chart = px.histogram(pd.DataFrame({'Group':[0], 
+        y_value:[0]}), x = 'Group', y = y_value)
+
+        # Even though this chart is empty, we may as well update the x
+        # and y axes with any custom labels passed to the function:
+        if custom_x_label is not None:
+        # See https://peps.python.org/pep-0008/#programming-recommendations
+        # and https://stackoverflow.com/a/23086405/13097194
+            empty_chart.update_layout(xaxis_title = custom_x_label)
+        if custom_y_label is not None:
+            empty_chart.update_layout(yaxis_title = custom_y_label)
+
+        return empty_chart, None
 
     # Converting 'None' strings to None values:
     if color_value == 'None':
@@ -600,8 +635,19 @@ table_round_precision = None):
     y = y_value, color = color_value, 
     barmode = selected_barmode, color_discrete_map=color_discrete_map,
     color_discrete_sequence=color_discrete_sequence,
-    pattern_shape = secondary_differentiator, text_auto = text_auto
-    )
+    pattern_shape = secondary_differentiator, text_auto = text_auto)
+
+
+    # Updating x and y axis labels to use user-submitted
+    # custom labels (if requested):
+
+    if custom_x_label is not None:
+        # See https://peps.python.org/pep-0008/#programming-recommendations
+        # and https://stackoverflow.com/a/23086405/13097194
+        output_histogram.update_layout(xaxis_title = custom_x_label)
+
+    if custom_y_label is not None:
+        output_histogram.update_layout(yaxis_title = custom_y_label)
 
     return output_histogram, table_data
 
@@ -613,7 +659,7 @@ comparison_values, color_value = None, color_discrete_map = None,
 color_discrete_sequence = px.colors.qualitative.Light24, 
 markers = True, secondary_differentiator = None,
 show_labels = True, label_round_precision = None,
-table_round_precision = None):
+table_round_precision = None, custom_x_label = None, custom_y_label = None):
     '''This function converts a pivot table (presumably one returned by
     create_pivot_for_charts() into an interactive line chart and table.
 
@@ -647,7 +693,33 @@ table_round_precision = None):
     table_round_precision: This variable rounds table values in the same way
     that label_round_precision rounds label values.
 
+    custom_x_label and custom_y_label: Custom x and y axis titles that will
+    override the automatically generated axis titles.
     '''
+
+    if len(data_source_pivot) == 0:
+        # In this case, there's no data to plot (i.e. because no values for
+        # a given filter were selected), so we'll end the function
+        # here by returning an empty chart and a table value of None.
+        # I had initially tried to return None for the chart also,
+        # but this (1) kept the pre-existing chart in place and (2) didn't
+        # allow any updates to be made. Therefore, I put together a basic
+        # empty chart using the y_value passed to the function and returned
+        # that instead. This approach allows the user to re-initialize
+        # the chart by adding an option to a blank filter menu.        
+        empty_chart = px.line(pd.DataFrame({'Group':[0], 
+        y_value:[0]}), x = 'Group', y = y_value)
+
+        # Even though this chart is empty, we may as well update the x
+        # and y axes with any custom labels passed to the function:
+        if custom_x_label is not None:
+        # See https://peps.python.org/pep-0008/#programming-recommendations
+        # and https://stackoverflow.com/a/23086405/13097194
+            empty_chart.update_layout(xaxis_title = custom_x_label)
+        if custom_y_label is not None:
+            empty_chart.update_layout(yaxis_title = custom_y_label)
+
+        return empty_chart, None
 
     # Converting 'None' strings to None values:
     if color_value == 'None':
@@ -703,5 +775,13 @@ table_round_precision = None):
     color_discrete_sequence=color_discrete_sequence,
     markers = markers, line_dash = secondary_differentiator, text = y_value
     )
+
+    if custom_x_label is not None:
+    # See https://peps.python.org/pep-0008/#programming-recommendations
+    # and https://stackoverflow.com/a/23086405/13097194
+        output_chart.update_layout(xaxis_title = custom_x_label)
+
+    if custom_y_label is not None:
+        output_chart.update_layout(yaxis_title = custom_y_label)
     
     return output_chart, table_data

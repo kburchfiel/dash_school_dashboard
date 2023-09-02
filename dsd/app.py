@@ -141,7 +141,7 @@ def load_user(username):
 
 app.layout = html.Div(
     [
-    html.A('logout', href='../logout'),
+    html.A('log out', href='../logout'),
     html.Br(),
     html.H1("Dash School Dashboard"),
 
@@ -162,8 +162,16 @@ app.layout = html.Div(
         ]
     ), # From https://dash.plotly.com/urls
 
-    dash.page_container
+    dash.page_container,
 
+    # Adding a link to the project's GitHub page at the bottom of each view:
+    # Regarding these HTML components: See
+    # https://dash.plotly.com/dash-html-components/
+    html.I("These dashboards were created by Kenneth Burchfiel and are released under the MIT license. (The login component of the dashboards is based heavily on code written by Nader Elshehabi and Jinnyzor; see GitHub link below for more information.) All of the data shown on these dashboards is entirely fictional."),
+    html.Br(),
+    html.A("Click here to visit the project's GitHub page.", href = 'https://github.com/kburchfiel/dash_school_dashboard'),
+    html.P("Blessed Carlo Acutis, pray for us!"),
+    # http://www.carloacutis.com/en/association/presentazione
     ]
 )
 

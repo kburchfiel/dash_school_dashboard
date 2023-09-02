@@ -121,4 +121,4 @@ def update_graph(starting_year_filter, school_filter, grade_filter,
         'Starting_Year', 'Outcome'] + enrollment_comparisons, 
         color_value = color_variable, 
         secondary_differentiator= pattern_variable,
-        barmode = 'group')
+        barmode = 'group', custom_y_label = 'Graduates')

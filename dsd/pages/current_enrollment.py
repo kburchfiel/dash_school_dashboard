@@ -105,7 +105,8 @@ def update_graph(school_filter, grade_filter,
         data_source_pivot = curr_enrollment_pivot, y_value = 'Students', 
         comparison_values = enrollment_comparisons, 
         color_value = color_variable, 
-        secondary_differentiator= pattern_variable)
+        secondary_differentiator= pattern_variable,
+        custom_y_label = 'Enrollment')
 
         # create_interactive_bar_chart_and_table() returns both a bar
         # chart (which corresponds to the 'enrollment_chart' Output)
