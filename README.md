@@ -6,8 +6,20 @@ This project shows how to build a simple set of interactive school dashboards us
 
 ## Usage Examples:
 
-### Loading a dashboard:
-![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_comparisons.gif | width=400)
+### Choosing how to compare data:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_comparisons.gif)
+
+### Changing dashboard filters:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_filters.gif)
+
+### Navigating between dashboards:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_page_navigation.gif)
+
+### Setting color and pattern options:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_setting_color_and_pattern.gif)
+
+### Logging in and out:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_logging_in_and_out.gif)
 
 
 # How These Dashboards Were Built
