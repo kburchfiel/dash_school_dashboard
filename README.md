@@ -7,7 +7,7 @@ This project shows how to build a simple set of interactive school dashboards us
 ## Usage Examples:
 
 ### Loading a dashboard:
-![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_comparisons.gif | width = 400)
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_comparisons.gif | width=400)
 
 
 # How These Dashboards Were Built
