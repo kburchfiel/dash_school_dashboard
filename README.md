@@ -2,10 +2,7 @@
 
 Released under the MIT license
 
-This project shows how to build a simple set of interactive school dashboards using Plotly and Dash.
-
-In order to view the output of the project, visit https://dsd-vtwzngx2pa-uc.a.run.app/ . The project is hosted on Google Cloud Run 
-and will take several seconds to load up initially. 
+This project shows how to build a simple set of interactive school dashboards using Plotly and Dash. These dashboards, hosted on Google Cloud Run [via this link](https://dsd-vtwzngx2pa-uc.a.run.app/), display fictional data for a made-up school district. The dashboard pages (which may take a little while to load) show enrollment counts, test results, and graduation outcomes for the district; in addition, they allow users to modify the filter and comparison settings to alter the appearance of the charts.
 
 # How These Dashboards Were Built
 
