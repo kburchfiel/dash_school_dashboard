@@ -4,6 +4,12 @@ Released under the MIT license
 
 This project shows how to build a simple set of interactive school dashboards using Plotly and Dash. These dashboards, hosted on Google Cloud Run [via this link](https://dsd-vtwzngx2pa-uc.a.run.app/), display fictional data for a made-up school district. The dashboard pages (which may take a little while to load) show enrollment counts, test results, and graduation outcomes for the district; in addition, they allow users to modify the filter and comparison settings to alter the appearance of the charts.
 
+## Usage Examples:
+
+### Loading a dashboard:
+![](https://raw.githubusercontent.com/kburchfiel/dash_school_dashboard/main/usage_examples/dsd_comparisons.gif | width = 400)
+
+
 # How These Dashboards Were Built
 
 This guide explains how I created a simple Plotly dashboard; uploaded it to Cloud Run; connected it to an ElephantSQL database; and expanded the app into a multi-page setup. I hope you will find these steps useful in developing your own Dash apps.
