@@ -58,13 +58,19 @@ I started the hosting process by getting a sample Dash app to run online; after 
 
 1. First, I created a new Google Cloud project within my [Google Cloud Console](https://console.cloud.google.com/), which I named 'kburchfiel-dash-apps'. I then set up the Google Cloud Command Line Interface (CLI) on my computer; this tool allows me to run my Python project online via Google Cloud Run. (See ['Install the gcloud CLI'](https://cloud.google.com/sdk/docs/install) for more information.) Instead of using the bundled version of Python, I updated my Windows system PATH file with the Python environment I wanted to use. [This guide](https://leifengblog.net/blog/Installing-Google-Cloud-SDK-to-Use-Python-from-Anaconda/) explains how to accomplish this step. 
 
-1. Next, as instructed by the [Cloud Run setup guide](https://cloud.google.com/run/docs/setup), I enabled the Cloud Run API for this new project. 
+1. Next, as instructed by the [Cloud Run setup guide](https://cloud.google.com/run/docs/setup), I enabled the Cloud Run API for this new project. (If you don't complete this step now, you'll still be prompted to do so when deploying your app, so you can skip this part if you'd like.)
 
-1. With these setup tasks out of the way, I then followed the steps shown in Google's [Deploy a Python service to Cloud Run](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) article, but made a couple changes along the way based on the [Dash Heroku deployment guide](https://dash.plotly.com/deployment#heroku-for-sharing-public-dash-apps-for-free) and on Arturo Tagle Correa's [Deploying Dash to Google Cloud Run in 5 minutes](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) guide. These changes were necessary because the Deploy a Python Service to Cloud Run guide uses a Flask app as its example rather than Dash (which I believe is also based on Flask). This quote from the Dash Heroku guide also helped clarify things for me: *"Note that app refers to the filename app.py. server refers to the variable server inside that file."*
+1. With these setup tasks out of the way, I then followed the steps shown in Google's [Deploy a Python service to Cloud Run](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) article, but made a couple changes along the way based on the [Dash Heroku deployment guide](https://dash.plotly.com/deployment#heroku-for-sharing-public-dash-apps-for-free) and on Arturo Tagle Correa's [Deploying Dash to Google Cloud Run in 5 minutes](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) guide. These changes were necessary because the Deploy a Python Service to Cloud Run guide uses a Flask app as its example rather than Dash (which I believe is also based on Flask). This quote from the Dash Heroku guide also helped clarify things for me: 
+
+    *"Note that app refers to the filename app.py. server refers to the variable server inside that file."*
 
     (By the way, I didn't follow all of the steps in Arturo's guide because his method involves installing Docker desktop. However, Docker is not free for certain commercial use cases. The above steps did not require that I install Docker desktop.)
 
-    Here are the changes I made to the steps shown in the Cloud Run guide:
+    One note before I go through these changes: The guide explains that you need to enter 'gcloud config set project PROJECT_ID' within the CLI in order to select your project, and that you should "Replace PROJECT_ID with the name of the project you created for this quickstart." However, make sure to replace Project ID with the project's ID, not its name, as the two won't always be the same! 
+    
+    (To find your project's ID, go to https://console.cloud.google.com/welcome and select your project within the top dropdown menu. You'll then be taken to a 'Welcome' page that shows your project's name (e.g. sample-app) and its ID (e.g. sample-app-398021). The ID will also be shown below the project name when you first creating your project.)
+
+    Now, without further ado, here are the changes I made to the steps shown in the Cloud Run guide:
 
     1. Instead of using the main.py file shown in the Google article, I used the app.py example found [within the Layout section of the Plotly tutorial](https://dash.plotly.com/layout#more-about-html-components). (As discussed earlier, I also used the name 'app.py' instead of 'main.py'.) I then added  "server = app.server" under "app = Dash(\_\_name\_\_)" within this file, as this is seen in both Arturo's guide and Dash's Heroku deployment tutorial. 
 
@@ -80,7 +86,7 @@ I started the hosting process by getting a sample Dash app to run online; after 
         gunicorn
         ```
 
-    1. I changed the final part of the Dockerfile example in the Google guide from "main:app" to "app:server", since (1) I was receiving error messages relating to gunicorn's inability to find 'main,'* and (2) [Arturo's guide](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) showed app:server here as well. Note that the Heroku Procfile shown in the Heroku deployment guide also ends in app:server.
+    1. I changed the final part of the Dockerfile example in the Google guide from "main:app" to "app:server", since (1) I was receiving error messages relating to gunicorn's inability to find 'main,'* and (2) [Arturo's guide](https://medium.com/kunder/deploying-dash-to-cloud-run-5-minutes-c026eeea46d4) showed app:server here as well. Note that the Heroku Procfile shown in the Heroku deployment guide also ends in app:server. By the way, don't forget to capitalize 'Dockerfile' within your project directory!
 
         *Note: when running Flask apps (not Dash apps) via Cloud Run, if you change the name of your app from 'main.py' to something else (e.g. 'app.py'), you'll also need to change the 'main' part of main:app in the Dockerfile to the name of your app (e.g. main:app --> app:app in the case of app.py). Otherwise, you'll receive an error message such as "no module named 'main'". However, since we're building a Dash app here, we don't need to make this change.*
 
@@ -93,6 +99,8 @@ I started the hosting process by getting a sample Dash app to run online; after 
     For guidance on what to enter within the Cloud Console after this command, visit [this section](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service#deploy) of Google's Deploy a Python Service to Cloud Run guide.
 
     When asked to provide a service name, I could just hit Enter to choose the default option. ([Source](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service))
+
+    If the Artifact Registry API was not enabled earlier, I would see a message like "API [artifactregistry.googleapis.com] not enabled on project [kburchfiel-dash-apps]. Would you like to enable and retry (this will take a few minutes)? (y/N)? 
 
 1. Ideally, after the CLI finished processing my request, I would see a message similar to the following:
 

@@ -1,0 +1,3 @@
+Hi everyone, in this video, I’d like to show you a sample web app I put together that is based on Plotly and Dash, two open-source Python libraries. 
+
+When we first click on the link, the app is going to take a little while to load. That’s because no instance of the container is currently active. Once I click on the URL, Cloud Run is going to wake up the container, but that takes a little while. If you need your app to load more quickly, you can keep the app and its CPU active at all times, but you’ll then incur additional charges. You can consult Cloud Run’s billing documentation for more information. 
